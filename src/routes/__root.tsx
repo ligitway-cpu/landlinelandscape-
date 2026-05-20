@@ -11,6 +11,7 @@ import appCss from "../styles.css?url";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloating } from "@/components/ui/whatsapp-floating";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
