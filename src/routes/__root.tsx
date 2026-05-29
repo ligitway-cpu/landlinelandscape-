@@ -75,7 +75,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Ankara'da 20+ yıllık deneyimle peyzaj tasarımı, uygulama ve bakım. Hayalinizdeki bahçeyi gerçeğe dönüştürüyoruz.",
+          "Ankara'da 15+ yıllık deneyimle peyzaj tasarımı, uygulama ve bakım. Hayalinizdeki bahçeyi gerçeğe dönüştürüyoruz.",
       },
       { name: "author", content: "Landline Landscape" },
       { name: "theme-color", content: "#336633" },

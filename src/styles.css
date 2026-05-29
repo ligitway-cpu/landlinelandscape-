@@ -154,7 +154,7 @@
     color: var(--color-dark-text);
   }
   .gradient-hero {
-    background-image: linear-gradient(155deg, rgba(30, 61, 30, 0.93) 0%, rgba(51, 102, 51, 0.80) 55%, rgba(37, 77, 37, 0.70) 100%);
+    background-image: linear-gradient(155deg, rgba(21, 45, 21, 0.96) 0%, rgba(30, 61, 30, 0.92) 55%, rgba(21, 45, 21, 0.88) 100%);
   }
   .gradient-dark {
     background-image: linear-gradient(180deg, #1e3d1e 0%, #152d15 100%);

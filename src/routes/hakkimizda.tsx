@@ -14,7 +14,7 @@ export const Route = createFileRoute("/hakkimizda")({
       { title: "Hakkımızda | Landline Landscape" },
       {
         name: "description",
-        content: "20+ yıllık deneyimle Ankara'nın önde gelen peyzaj tasarım firması Landline Landscape.",
+        content: "15+ yıllık deneyimle Ankara'nın önde gelen peyzaj tasarım firması Landline Landscape.",
       },
       { property: "og:title", content: "Hakkımızda | Landline Landscape" },
       {
@@ -45,7 +45,7 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2004", event: "Landline'ın temelleri Ankara'da atıldı." },
+  { year: "2011", event: "Landline'ın temelleri Ankara'da atıldı." },
   { year: "2010", event: "İlk büyük villa peyzajı projesi tamamlandı." },
   { year: "2016", event: "Sürdürülebilir peyzaj birimi kuruldu." },
   { year: "2020", event: "100. proje teslim edildi, ekip genişledi." },
@@ -91,7 +91,7 @@ function HakkimizdaPage() {
               Çizgilerin ardındaki ekip
             </motion.h3>
             <motion.p variants={fadeUp}>
-              Landline Landscape, 2004'ten bu yana Ankara'da peyzaj sanatını farklı bir lige
+              Landline Landscape, 2011'den bu yana Ankara'da peyzaj sanatını farklı bir lige
               taşımak için çalışan, çok disiplinli bir tasarım ve uygulama atölyesidir. Peyzaj
               mimarları, bahçe ustaları, sulama mühendisleri ve bakım teknisyenlerinden oluşan
               ekibimizle her projeyi tek bir el gibi yönetiyoruz.
@@ -159,7 +159,7 @@ function HakkimizdaPage() {
               className="rounded-xl shadow-card w-full object-cover aspect-[4/3]"
             />
             <div className="absolute -bottom-6 -right-6 bg-secondary text-white px-6 py-4 rounded-lg shadow-copper">
-              <p className="font-heading font-bold text-3xl leading-none">20+</p>
+              <p className="font-heading font-bold text-3xl leading-none">15+</p>
               <p className="text-xs uppercase tracking-wider mt-1">Yıl Deneyim</p>
             </div>
           </motion.div>
