@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Landline Landscape — Peyzaj Sanatı Bir Çizgiyle Başlar" },
       {
         property: "og:description",
-        content: "Ankara'da 20+ yıllık deneyimle peyzaj tasarımı, uygulama ve bakım.",
+        content: "Ankara'da 15+ yıllık deneyimle peyzaj tasarımı, uygulama ve bakım.",
       },
     ],
   }),

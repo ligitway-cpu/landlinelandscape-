@@ -54,7 +54,7 @@ export function HeroSection() {
           </motion.div>
 
           <motion.p variants={item} className="max-w-xl text-dark-text/85 text-lg leading-relaxed">
-            20 yılı aşkın deneyimle, hayalinizdeki bahçeyi gerçeğe dönüştürüyoruz.
+            15 yılı aşkın deneyimle, hayalinizdeki bahçeyi gerçeğe dönüştürüyoruz.
             Ankara ve çevresinde tasarımdan bakıma uçtan uca hizmet veriyoruz.
           </motion.p>
 

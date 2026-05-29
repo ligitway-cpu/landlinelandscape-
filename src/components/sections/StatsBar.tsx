@@ -1,7 +1,7 @@
 import { AnimatedCounter } from '@/components/ui/animated-counter';
 
 const stats = [
-  { value: 20, suffix: '+', label: 'Yıl Deneyim' },
+  { value: 15, suffix: '+', label: 'Yıl Deneyim' },
   { value: 250, suffix: '+', label: 'Tamamlanan Proje' },
   { value: 100, suffix: '%', label: 'Müşteri Memnuniyeti' },
   { value: 40, suffix: '+', label: 'Uzman Ekip' },
