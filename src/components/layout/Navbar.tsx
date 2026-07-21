@@ -74,7 +74,12 @@ export function Navbar() {
         <button
           aria-label="Menü"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex items-center justify-center text-dark-text p-2"
+          className={cn(
+            'lg:hidden inline-flex items-center justify-center rounded-lg p-2 transition-colors',
+            open
+              ? 'bg-secondary text-primary-dark'
+              : 'bg-primary-dark/60 backdrop-blur-sm text-dark-text hover:bg-primary-dark/80',
+          )}
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
