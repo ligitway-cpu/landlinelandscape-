@@ -34,7 +34,7 @@ export function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
-          className="max-w-3xl bg-dark-bg-deep/70 backdrop-blur-md rounded-xl border border-dark-text/10 p-6 md:p-8 lg:p-10 shadow-card"
+          className="max-w-3xl"
         >
           <motion.span variants={item} className="section-label !text-secondary-pale">
             Ankara · Türkiye
@@ -53,7 +53,7 @@ export function HeroSection() {
             <CopperRule width="md" className="my-7" />
           </motion.div>
 
-          <motion.p variants={item} className="max-w-xl text-dark-text/90 text-lg leading-relaxed">
+          <motion.p variants={item} className="max-w-xl text-dark-text/85 text-lg leading-relaxed">
             15 yılı aşkın deneyimle, hayalinizdeki bahçeyi gerçeğe dönüştürüyoruz.
             Ankara ve çevresinde tasarımdan bakıma uçtan uca hizmet veriyoruz.
           </motion.p>
