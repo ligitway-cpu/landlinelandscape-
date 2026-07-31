@@ -1,5 +1,5 @@
 export const contact = {
-  phone: '+90 531 715 37 79',
+  phone: '+905317153779',
   phoneRaw: '+905317153779',
   whatsapp: '+905317153779',
   whatsappUrl: 'https://wa.me/905317153779',
