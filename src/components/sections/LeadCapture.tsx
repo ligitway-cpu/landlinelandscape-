@@ -30,11 +30,12 @@ export function LeadCapture() {
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setSubmitting(true);
     setTimeout(() => {
       setSubmitting(false);
       toast.success('Teşekkürler! En kısa sürede size dönüş yapacağız.');
-      e.currentTarget?.reset?.();
+      form.reset();
     }, 600);
   };
 
