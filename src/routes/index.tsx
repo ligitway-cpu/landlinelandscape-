@@ -32,11 +32,14 @@ function Index() {
   return (
     <>
       <HeroSection />
+      <TrustBar />
       <StatsBar />
       <ServicesGrid />
+      <ProcessTimeline />
       <ProjectsShowcase />
+      <TransformationsSection />
       <TestimonialsCarousel />
-      <CTABanner />
+      <LeadCapture />
     </>
   );
 }
