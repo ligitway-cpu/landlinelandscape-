@@ -37,14 +37,39 @@ const steps = [
   { n: 4, title: "Teslimat & Bakım", text: "Teslim sonrası bakım anlaşmasıyla bahçeniz dört mevsim güvende." },
 ];
 
-const extras = [
-  "Bahçe Aydınlatması",
-  "Çatı Bahçeleri",
-  "Oyun Alanları",
-  "Yağmur Bahçeleri",
-  "Sulama Sistemleri",
-  "Dış Mekan Mobilyası",
+const extras: { icon: LucideIcon; title: string; text: string }[] = [
+  {
+    icon: Zap,
+    title: "Bahçe Aydınlatması",
+    text: "Bahçenizi gece de yaşanabilir kılıyoruz. LED spot, güneş enerjili ve akıllı aydınlatma sistemleri kuruyoruz.",
+  },
+  {
+    icon: Droplets,
+    title: "Sulama Sistemleri",
+    text: "Otomatik damla sulama, sprinkler ve akıllı kontrol sistemleri ile su tasarrufu ve sağlıklı bitkiler. Yazın bahçenizi unutun.",
+  },
+  {
+    icon: Home,
+    title: "Çatı & Teras Bahçeleri",
+    text: "Balkon ve çatı teraslarını yeşil yaşam alanlarına dönüştürüyoruz. Hafif substrat, özel bitki seçimi.",
+  },
+  {
+    icon: Smile,
+    title: "Çocuk Oyun Alanları",
+    text: "Güvenli zemin kaplamaları, doğal ahşap ve eğlenceli tasarımlarla çocuklara özel bahçe köşeleri.",
+  },
+  {
+    icon: CloudRain,
+    title: "Yağmur Bahçeleri",
+    text: "Yağmur suyunu toprağa kazandıran, sel riskini azaltan ve biyoçeşitliği destekleyen sürdürülebilir bahçe sistemleri.",
+  },
+  {
+    icon: Armchair,
+    title: "Dış Mekan Mobilya & Tasarım",
+    text: "Bahçenizin stiline uygun pergola, oturma grubu ve dış mekan mobilya seçimi ve yerleştirmesi.",
+  },
 ];
+
 
 function HizmetlerPage() {
   return (
