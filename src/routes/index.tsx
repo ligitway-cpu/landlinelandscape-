@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { StatsBar } from "@/components/sections/StatsBar";
+import { GuaranteeStrip } from "@/components/sections/GuaranteeStrip";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
@@ -34,6 +35,7 @@ function Index() {
       <HeroSection />
       <TrustBar />
       <StatsBar />
+      <GuaranteeStrip />
       <ServicesGrid />
       <ProcessTimeline />
       <ProjectsShowcase />
