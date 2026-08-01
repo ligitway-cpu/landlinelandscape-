@@ -209,23 +209,54 @@ function HizmetlerPage() {
         <div className="container-x">
           <div className="max-w-2xl mb-10">
             <SectionLabel>Ek Hizmetler</SectionLabel>
-            <h2 className="!text-primary">Bahçenizi tamamlayan dokunuşlar</h2>
+            <h2 className="!text-primary">Ek Hizmetlerimiz — Tam Kapsamlı Bahçe Çözümleri</h2>
             <CopperRule />
+            <p className="text-text-muted mt-4">Her detayı tek bir uzman ekipten alın.</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {extras.map((e) => (
-              <div
-                key={e}
-                className="bg-white border border-border rounded-lg px-5 py-5 font-heading font-semibold text-primary hover:border-secondary hover:shadow-soft transition-all"
+              <motion.div
+                key={e.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ y: -4 }}
+                className="group bg-white border border-border rounded-xl p-6 shadow-soft hover:shadow-card hover:border-secondary transition-[border-color,box-shadow] duration-300"
               >
-                {e}
-              </div>
+                <div className="size-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/15 transition-colors">
+                  <e.icon size={22} className="text-primary group-hover:text-secondary transition-colors" />
+                </div>
+                <h3 className="!text-primary text-lg font-heading font-bold">{e.title}</h3>
+                <CopperRule width="sm" />
+                <p className="text-sm text-text-muted leading-relaxed">{e.text}</p>
+                <Link
+                  to="/iletisim"
+                  className="mt-4 inline-flex items-center gap-1.5 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors group/link"
+                >
+                  Bilgi Al
+                  <ArrowRight size={15} className="group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Guarantee note */}
+      <section className="bg-white pb-4 pt-14">
+        <div className="container-x">
+          <div className="flex items-center gap-4 rounded-xl border border-border bg-primary/5 px-6 py-5">
+            <ShieldCheck size={30} className="text-primary shrink-0" />
+            <p className="font-heading font-semibold text-primary">
+              Her projemiz 2 yıl işçilik garantisi kapsamındadır.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <CTABanner />
+
     </>
   );
 }
