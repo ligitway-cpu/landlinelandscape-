@@ -1,6 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Check, PenTool, Hammer, Scissors, Sprout, type LucideIcon } from "lucide-react";
+import {
+  Check,
+  PenTool,
+  Hammer,
+  Scissors,
+  Sprout,
+  Zap,
+  Droplets,
+  Home,
+  Smile,
+  CloudRain,
+  Armchair,
+  ShieldCheck,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/sections/PageHero";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { CopperRule } from "@/components/ui/copper-rule";
