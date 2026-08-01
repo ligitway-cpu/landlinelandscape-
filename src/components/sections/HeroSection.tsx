@@ -56,20 +56,26 @@ export function HeroSection() {
             Sulama sistemleri, aydınlatma, taş döşeme — tek firmadan uçtan uca hizmet.
           </motion.p>
 
-          <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink
-              href={contact.whatsappMsg}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
-              size="lg"
-            >
-              Ücretsiz Keşif Talep Et
-            </ButtonLink>
-            <ButtonLink href="/projeler" variant="outline-light" size="lg">
-              Projelerimizi İncele
-            </ButtonLink>
+          <motion.div variants={item} className="mt-8">
+            <div className="flex flex-wrap gap-3">
+              <ButtonLink
+                href={contact.whatsappMsg}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                size="lg"
+              >
+                Ücretsiz Keşif Talep Et
+              </ButtonLink>
+              <ButtonLink href="/projeler" variant="outline-light" size="lg">
+                Projelerimizi İncele
+              </ButtonLink>
+            </div>
+            <p className="mt-3 text-sm text-secondary-pale">
+              ✓ Ücretsiz keşif · ✓ 2 yıl garanti · ✓ Şeffaf fiyatlandırma
+            </p>
           </motion.div>
+
         </motion.div>
       </div>
 
