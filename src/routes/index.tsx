@@ -1,14 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { TrustBar } from "@/components/sections/TrustBar";
 import { StatsBar } from "@/components/sections/StatsBar";
-import { GuaranteeStrip } from "@/components/sections/GuaranteeStrip";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
-import { TransformationsSection } from "@/components/sections/TransformationsSection";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
-import { LeadCapture } from "@/components/sections/LeadCapture";
+import { CTABanner } from "@/components/sections/CTABanner";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,15 +29,11 @@ function Index() {
   return (
     <>
       <HeroSection />
-      <TrustBar />
       <StatsBar />
-      <GuaranteeStrip />
       <ServicesGrid />
-      <ProcessTimeline />
       <ProjectsShowcase />
-      <TransformationsSection />
       <TestimonialsCarousel />
-      <LeadCapture />
+      <CTABanner />
     </>
   );
 }

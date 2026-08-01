@@ -34,27 +34,12 @@ function SSSPage() {
     return acc;
   }, {});
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.question,
-      acceptedAnswer: { "@type": "Answer", text: f.answer },
-    })),
-  };
-
   return (
     <>
       <PageHero
         label="SSS"
         title="Sıkça Sorulan Sorular"
         breadcrumb={[{ label: "Anasayfa", to: "/" }, { label: "SSS" }]}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <section className="section-y bg-surface">
@@ -73,10 +58,7 @@ function SSSPage() {
                     <AccordionTrigger className="py-5 text-left font-heading font-semibold text-base md:text-lg text-primary hover:no-underline hover:text-secondary [&[data-state=open]]:text-secondary">
                       {f.question}
                     </AccordionTrigger>
-                    <AccordionContent
-                      forceMount
-                      className="text-text leading-relaxed pb-5 data-[state=closed]:hidden"
-                    >
+                    <AccordionContent className="text-text leading-relaxed pb-5">
                       {f.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -86,7 +68,6 @@ function SSSPage() {
           ))}
         </div>
       </section>
-
 
       <CTABanner
         title="Hâlâ sorunuz mu var?"

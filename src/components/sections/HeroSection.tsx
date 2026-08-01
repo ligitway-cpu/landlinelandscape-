@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { Phone, MessageCircle, ArrowDown } from 'lucide-react';
 import heroImg from '@/assets/hero.jpg';
 import { ButtonLink } from '@/components/ui/brand-button';
 import { CopperRule } from '@/components/ui/copper-rule';
@@ -37,14 +37,16 @@ export function HeroSection() {
           className="max-w-3xl"
         >
           <motion.span variants={item} className="section-label !text-secondary-pale">
-            15 Yıl · 250+ Proje · Çankaya'dan Keçiören'e Tüm Ankara
+            Ankara · Türkiye
           </motion.span>
 
           <motion.h1
             variants={item}
             className="!text-dark-text font-heading font-bold leading-[1.05] mt-3"
           >
-            Ankara'nın Önde Gelen Peyzaj Tasarım Stüdyosu
+            Peyzaj Sanatı<br />
+            Bir Çizgiyle<br />
+            <span className="italic font-light text-secondary-pale">Başlar.</span>
           </motion.h1>
 
           <motion.div variants={item}>
@@ -52,30 +54,46 @@ export function HeroSection() {
           </motion.div>
 
           <motion.p variants={item} className="max-w-xl text-dark-text/85 text-lg leading-relaxed">
-            Hayal ettiğiniz bahçeyi, 3D tasarımdan teslimata kadar eksiksiz uyguluyoruz.
-            Sulama sistemleri, aydınlatma, taş döşeme — tek firmadan uçtan uca hizmet.
+            15 yılı aşkın deneyimle, hayalinizdeki bahçeyi gerçeğe dönüştürüyoruz.
+            Ankara ve çevresinde tasarımdan bakıma uçtan uca hizmet veriyoruz.
           </motion.p>
 
-          <motion.div variants={item} className="mt-8">
-            <div className="flex flex-wrap gap-3">
-              <ButtonLink
-                href={contact.whatsappMsg}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="primary"
-                size="lg"
-              >
-                Ücretsiz Keşif Talep Et
-              </ButtonLink>
-              <ButtonLink href="/projeler" variant="outline-light" size="lg">
-                Projelerimizi İncele
-              </ButtonLink>
-            </div>
-            <p className="mt-3 text-sm text-secondary-pale">
-              ✓ Ücretsiz keşif · ✓ 2 yıl garanti · ✓ Şeffaf fiyatlandırma
-            </p>
+          <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+            <ButtonLink
+              href={contact.whatsappMsg}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="primary"
+              size="lg"
+            >
+              Ücretsiz Keşif Görüşmesi
+            </ButtonLink>
+            <ButtonLink href="/projeler" variant="outline-light" size="lg">
+              Projelerimizi İncele
+            </ButtonLink>
           </motion.div>
 
+          <motion.div
+            variants={item}
+            className="mt-10 pt-6 border-t border-dark-text/15 flex flex-wrap items-center gap-6 text-sm"
+          >
+            <a
+              href={`tel:${contact.phoneRaw}`}
+              className="inline-flex items-center gap-2 text-dark-text hover:text-secondary-pale transition-colors"
+            >
+              <Phone size={16} className="text-secondary-pale" />
+              <span className="font-heading font-semibold tracking-wide">{contact.phone}</span>
+            </a>
+            <a
+              href={contact.whatsappMsg}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-dark-text hover:text-whatsapp transition-colors"
+            >
+              <MessageCircle size={16} className="text-secondary-pale" />
+              <span className="font-body font-semibold uppercase tracking-wider">WhatsApp</span>
+            </a>
+          </motion.div>
         </motion.div>
       </div>
 

@@ -6,7 +6,6 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { CopperRule } from "@/components/ui/copper-rule";
 import { SectionLabel } from "@/components/ui/section-label";
 import { fadeUp, staggerContainer } from "@/lib/variants";
-import { contact } from "@/data/contact";
 import teamImg from "@/assets/team.jpg";
 
 export const Route = createFileRoute("/hakkimizda")({
@@ -46,21 +45,12 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2009", event: "Landline Landscape, Ankara'da peyzaj mühendisliği alanında kuruldu." },
-  { year: "2011", event: "İlk büyük konut projesi Çankaya'da tamamlandı. Ekip 5 kişiye ulaştı." },
-  { year: "2015", event: "Ticari peyzaj bölümü kuruldu. Kurumsal kampüs projeleri başladı." },
-  { year: "2019", event: "Sürdürülebilir peyzaj ve akıllı sulama sistemleri hizmet yelpazesine eklendi." },
-  { year: "2022", event: "100. proje teslim edildi. Ekip 25+ uzmanla büyüdü." },
-  { year: "2024", event: "250. proje tamamlandı. 40+ kişilik uzman kadro, Ankara genelinde aktif." },
+  { year: "2011", event: "Landline'ın temelleri Ankara'da atıldı." },
+  { year: "2010", event: "İlk büyük villa peyzajı projesi tamamlandı." },
+  { year: "2016", event: "Sürdürülebilir peyzaj birimi kuruldu." },
+  { year: "2020", event: "100. proje teslim edildi, ekip genişledi." },
+  { year: "2024", event: "250+ proje, 40+ kişilik uzman ekiple devam." },
 ];
-
-const team = [
-  { initials: "LD", name: "Kurucu Ortak", title: "Peyzaj Mimarı, 15+ Yıl Deneyim" },
-  { initials: "PY", name: "Proje Yöneticisi", title: "Saha Koordinasyonu, Uygulama" },
-  { initials: "ZM", name: "Ziraat Mühendisi", title: "Bitki Sağlığı & Sulama Sistemleri" },
-  { initials: "TU", name: "Tasarım Uzmanı", title: "3D Görselleştirme & Konsept" },
-];
-
 
 function HakkimizdaPage() {
   return (
@@ -168,6 +158,10 @@ function HakkimizdaPage() {
               height={960}
               className="rounded-xl shadow-card w-full object-cover aspect-[4/3]"
             />
+            <div className="absolute -bottom-6 -right-6 bg-secondary text-white px-6 py-4 rounded-lg shadow-copper">
+              <p className="font-heading font-bold text-3xl leading-none">15+</p>
+              <p className="text-xs uppercase tracking-wider mt-1">Yıl Deneyim</p>
+            </div>
           </motion.div>
           <div>
             <SectionLabel>Uzman Ekibimiz</SectionLabel>
@@ -193,39 +187,7 @@ function HakkimizdaPage() {
             </ul>
           </div>
         </div>
-
-        <div className="container-x mt-16">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((m) => (
-              <motion.div
-                key={m.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5 }}
-                className="rounded-xl border border-border bg-white p-6 text-center shadow-soft"
-              >
-                <div className="mx-auto grid size-20 place-items-center rounded-full bg-primary/10 font-heading font-bold text-xl text-primary">
-                  {m.initials}
-                </div>
-                <h3 className="mt-4 !text-primary text-base font-heading font-bold">{m.name}</h3>
-                <p className="mt-1 text-sm text-text-muted leading-relaxed">{m.title}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <p className="mt-10 text-center font-heading text-lg text-primary">
-            Ekibimizle tanışmak ister misiniz? Arayın:{" "}
-            <a
-              href={`tel:${contact.phoneRaw}`}
-              className="font-bold text-secondary underline decoration-secondary/40 underline-offset-4 hover:text-secondary-dark transition-colors"
-            >
-              {contact.phone}
-            </a>
-          </p>
-        </div>
       </section>
-
 
       {/* Timeline */}
       <section className="section-y gradient-dark dark-section">
@@ -236,7 +198,7 @@ function HakkimizdaPage() {
             <CopperRule align="center" className="mx-auto" />
           </div>
           <div className="relative overflow-x-auto pb-4">
-            <div className="absolute top-[34px] left-0 right-0 h-px bg-secondary/40 block md:hidden lg:block" />
+            <div className="absolute top-[34px] left-0 right-0 h-px bg-secondary/40" />
             <ol className="flex gap-10 min-w-max md:grid md:grid-cols-5 md:gap-6 md:min-w-0">
               {timeline.map((t, idx) => (
                 <motion.li
