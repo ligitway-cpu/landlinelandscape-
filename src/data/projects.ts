@@ -2,6 +2,8 @@ import villa from '@/assets/villa_bahcesi.jpg';
 import outdoor from '@/assets/outdoor_oturma.jpg';
 import park from '@/assets/ankara_park.jpg';
 import sustain from '@/assets/surdurulebilir.jpg';
+import cati from '@/assets/cati_bahcesi.jpg';
+import kampus from '@/assets/kurumsal_kampus.jpg';
 
 export type ProjectCategory = 'konut' | 'ticari' | 'kamusal' | 'surdurulebilir';
 
@@ -102,7 +104,7 @@ export const projects: Project[] = [
     category: 'konut',
     categoryLabel: 'Konut',
     // TODO: gerçek proje fotoğrafı ile değiştirilecek (geçici placeholder)
-    image: sustain,
+    image: cati,
     shortDescription: 'Çatı katı için hafif yapılı, modern peyzaj çözümü.',
     description:
       "Çankaya'da rezidans çatı katı — hafif substrat, rüzgara dayanıklı bitkiler ve teras mobilyası.",
@@ -119,7 +121,7 @@ export const projects: Project[] = [
     category: 'ticari',
     categoryLabel: 'Ticari',
     // TODO: gerçek proje fotoğrafı ile değiştirilecek (geçici placeholder)
-    image: sustain,
+    image: kampus,
     shortDescription: 'Şirket kampüsü için ölçekli, davetkar ve fonksiyonel düzen.',
     description:
       'Kurumsal kampüs girişi ve açık alanlarının yeşillendirme ve sert zemin uygulamaları.',

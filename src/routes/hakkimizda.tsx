@@ -6,6 +6,7 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { CopperRule } from "@/components/ui/copper-rule";
 import { SectionLabel } from "@/components/ui/section-label";
 import { fadeUp, staggerContainer } from "@/lib/variants";
+import { contact } from "@/data/contact";
 import teamImg from "@/assets/team.jpg";
 
 export const Route = createFileRoute("/hakkimizda")({
