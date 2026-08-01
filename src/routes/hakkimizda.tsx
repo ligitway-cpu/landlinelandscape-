@@ -235,7 +235,7 @@ function HakkimizdaPage() {
             <CopperRule align="center" className="mx-auto" />
           </div>
           <div className="relative overflow-x-auto pb-4">
-            <div className="absolute top-[34px] left-0 right-0 h-px bg-secondary/40" />
+            <div className="absolute top-[34px] left-0 right-0 h-px bg-secondary/40 block md:hidden lg:block" />
             <ol className="flex gap-10 min-w-max md:grid md:grid-cols-5 md:gap-6 md:min-w-0">
               {timeline.map((t, idx) => (
                 <motion.li

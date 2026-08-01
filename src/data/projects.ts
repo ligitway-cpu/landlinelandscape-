@@ -14,6 +14,7 @@ export interface Project {
   categoryLabel: string;
   image: string;
   shortDescription: string;
+  description: string;
   year: number;
   area?: string;
   duration?: string;
@@ -38,9 +39,11 @@ export const projects: Project[] = [
     categoryLabel: 'Konut',
     image: villa,
     shortDescription: 'Modern villa için özgün, doğayla bütünleşen bahçe tasarımı.',
+    description:
+      "Çankaya'da özel villa için tasarlanan bu projede, gizlilik ekranları, çim alanlar ve otomatik sulama sistemi bir arada uygulandı.",
     year: 2024,
-    area: '850 m²',
-    duration: '4 ay',
+    area: '450 m²',
+    duration: '6 Hafta',
     featured: true,
   },
   {
@@ -52,9 +55,11 @@ export const projects: Project[] = [
     categoryLabel: 'Ticari',
     image: outdoor,
     shortDescription: 'Otel terası için sıcak atmosferli outdoor lounge düzeni.',
+    description:
+      'Ticari bir mekânın dış alanı, oturma grupları, bitki duvarı ve aydınlatma sistemiyle dönüştürüldü.',
     year: 2024,
-    area: '320 m²',
-    duration: '2 ay',
+    area: '120 m²',
+    duration: '3 Hafta',
     featured: true,
   },
   {
@@ -66,9 +71,11 @@ export const projects: Project[] = [
     categoryLabel: 'Kamusal',
     image: park,
     shortDescription: 'Mahalle parkı için kapsamlı yenileme ve peyzaj çalışması.',
+    description:
+      "Yenimahalle'de kamusal yeşil alan projesi — yürüyüş yolları, oyun alanı ve su öğesiyle yenilendi.",
     year: 2023,
-    area: '4.200 m²',
-    duration: '6 ay',
+    area: '2.400 m²',
+    duration: '8 Hafta',
     featured: true,
   },
   {
@@ -80,9 +87,11 @@ export const projects: Project[] = [
     categoryLabel: 'Sürdürülebilir',
     image: sustain,
     shortDescription: 'Yerel bitkilerle kurulan suya duyarlı sürdürülebilir bahçe.',
+    description:
+      "Etimesgut'ta meyve ağaçları, sebze yatakları ve kompost sistemiyle kurgulanmış üretken bahçe.",
     year: 2024,
-    area: '410 m²',
-    duration: '3 ay',
+    area: '280 m²',
+    duration: '4 Hafta',
     featured: false,
   },
   {
@@ -92,11 +101,14 @@ export const projects: Project[] = [
     location: 'Ankara / Çankaya',
     category: 'konut',
     categoryLabel: 'Konut',
-    image: outdoor,
+    // TODO: gerçek proje fotoğrafı ile değiştirilecek (geçici placeholder)
+    image: sustain,
     shortDescription: 'Çatı katı için hafif yapılı, modern peyzaj çözümü.',
+    description:
+      "Çankaya'da rezidans çatı katı — hafif substrat, rüzgara dayanıklı bitkiler ve teras mobilyası.",
     year: 2023,
-    area: '180 m²',
-    duration: '6 hafta',
+    area: '85 m²',
+    duration: '2 Hafta',
     featured: false,
   },
   {
@@ -106,11 +118,14 @@ export const projects: Project[] = [
     location: 'Ankara / Çankaya',
     category: 'ticari',
     categoryLabel: 'Ticari',
-    image: park,
+    // TODO: gerçek proje fotoğrafı ile değiştirilecek (geçici placeholder)
+    image: sustain,
     shortDescription: 'Şirket kampüsü için ölçekli, davetkar ve fonksiyonel düzen.',
+    description:
+      'Kurumsal kampüs girişi ve açık alanlarının yeşillendirme ve sert zemin uygulamaları.',
     year: 2022,
-    area: '6.800 m²',
-    duration: '9 ay',
+    area: '1.200 m²',
+    duration: '6 Hafta',
     featured: false,
   },
 ];
