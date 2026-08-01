@@ -45,12 +45,21 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2011", event: "Landline'ın temelleri Ankara'da atıldı." },
-  { year: "2010", event: "İlk büyük villa peyzajı projesi tamamlandı." },
-  { year: "2016", event: "Sürdürülebilir peyzaj birimi kuruldu." },
-  { year: "2020", event: "100. proje teslim edildi, ekip genişledi." },
-  { year: "2024", event: "250+ proje, 40+ kişilik uzman ekiple devam." },
+  { year: "2009", event: "Landline Landscape, Ankara'da peyzaj mühendisliği alanında kuruldu." },
+  { year: "2011", event: "İlk büyük konut projesi Çankaya'da tamamlandı. Ekip 5 kişiye ulaştı." },
+  { year: "2015", event: "Ticari peyzaj bölümü kuruldu. Kurumsal kampüs projeleri başladı." },
+  { year: "2019", event: "Sürdürülebilir peyzaj ve akıllı sulama sistemleri hizmet yelpazesine eklendi." },
+  { year: "2022", event: "100. proje teslim edildi. Ekip 25+ uzmanla büyüdü." },
+  { year: "2024", event: "250. proje tamamlandı. 40+ kişilik uzman kadro, Ankara genelinde aktif." },
 ];
+
+const team = [
+  { initials: "LD", name: "Kurucu Ortak", title: "Peyzaj Mimarı, 15+ Yıl Deneyim" },
+  { initials: "PY", name: "Proje Yöneticisi", title: "Saha Koordinasyonu, Uygulama" },
+  { initials: "ZM", name: "Ziraat Mühendisi", title: "Bitki Sağlığı & Sulama Sistemleri" },
+  { initials: "TU", name: "Tasarım Uzmanı", title: "3D Görselleştirme & Konsept" },
+];
+
 
 function HakkimizdaPage() {
   return (
