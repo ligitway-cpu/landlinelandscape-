@@ -1,6 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Check, PenTool, Hammer, Scissors, Sprout, type LucideIcon } from "lucide-react";
+import {
+  Check,
+  PenTool,
+  Hammer,
+  Scissors,
+  Sprout,
+  Zap,
+  Droplets,
+  Home,
+  Smile,
+  CloudRain,
+  Armchair,
+  ShieldCheck,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/sections/PageHero";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { CopperRule } from "@/components/ui/copper-rule";
@@ -37,14 +53,39 @@ const steps = [
   { n: 4, title: "Teslimat & Bakım", text: "Teslim sonrası bakım anlaşmasıyla bahçeniz dört mevsim güvende." },
 ];
 
-const extras = [
-  "Bahçe Aydınlatması",
-  "Çatı Bahçeleri",
-  "Oyun Alanları",
-  "Yağmur Bahçeleri",
-  "Sulama Sistemleri",
-  "Dış Mekan Mobilyası",
+const extras: { icon: LucideIcon; title: string; text: string }[] = [
+  {
+    icon: Zap,
+    title: "Bahçe Aydınlatması",
+    text: "Bahçenizi gece de yaşanabilir kılıyoruz. LED spot, güneş enerjili ve akıllı aydınlatma sistemleri kuruyoruz.",
+  },
+  {
+    icon: Droplets,
+    title: "Sulama Sistemleri",
+    text: "Otomatik damla sulama, sprinkler ve akıllı kontrol sistemleri ile su tasarrufu ve sağlıklı bitkiler. Yazın bahçenizi unutun.",
+  },
+  {
+    icon: Home,
+    title: "Çatı & Teras Bahçeleri",
+    text: "Balkon ve çatı teraslarını yeşil yaşam alanlarına dönüştürüyoruz. Hafif substrat, özel bitki seçimi.",
+  },
+  {
+    icon: Smile,
+    title: "Çocuk Oyun Alanları",
+    text: "Güvenli zemin kaplamaları, doğal ahşap ve eğlenceli tasarımlarla çocuklara özel bahçe köşeleri.",
+  },
+  {
+    icon: CloudRain,
+    title: "Yağmur Bahçeleri",
+    text: "Yağmur suyunu toprağa kazandıran, sel riskini azaltan ve biyoçeşitliği destekleyen sürdürülebilir bahçe sistemleri.",
+  },
+  {
+    icon: Armchair,
+    title: "Dış Mekan Mobilya & Tasarım",
+    text: "Bahçenizin stiline uygun pergola, oturma grubu ve dış mekan mobilya seçimi ve yerleştirmesi.",
+  },
 ];
+
 
 function HizmetlerPage() {
   return (
@@ -168,23 +209,54 @@ function HizmetlerPage() {
         <div className="container-x">
           <div className="max-w-2xl mb-10">
             <SectionLabel>Ek Hizmetler</SectionLabel>
-            <h2 className="!text-primary">Bahçenizi tamamlayan dokunuşlar</h2>
+            <h2 className="!text-primary">Ek Hizmetlerimiz — Tam Kapsamlı Bahçe Çözümleri</h2>
             <CopperRule />
+            <p className="text-text-muted mt-4">Her detayı tek bir uzman ekipten alın.</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {extras.map((e) => (
-              <div
-                key={e}
-                className="bg-white border border-border rounded-lg px-5 py-5 font-heading font-semibold text-primary hover:border-secondary hover:shadow-soft transition-all"
+              <motion.div
+                key={e.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ y: -4 }}
+                className="group bg-white border border-border rounded-xl p-6 shadow-soft hover:shadow-card hover:border-secondary transition-[border-color,box-shadow] duration-300"
               >
-                {e}
-              </div>
+                <div className="size-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/15 transition-colors">
+                  <e.icon size={22} className="text-primary group-hover:text-secondary transition-colors" />
+                </div>
+                <h3 className="!text-primary text-lg font-heading font-bold">{e.title}</h3>
+                <CopperRule width="sm" />
+                <p className="text-sm text-text-muted leading-relaxed">{e.text}</p>
+                <Link
+                  to="/iletisim"
+                  className="mt-4 inline-flex items-center gap-1.5 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors group/link"
+                >
+                  Bilgi Al
+                  <ArrowRight size={15} className="group-hover/link:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Guarantee note */}
+      <section className="bg-white pb-4 pt-14">
+        <div className="container-x">
+          <div className="flex items-center gap-4 rounded-xl border border-border bg-primary/5 px-6 py-5">
+            <ShieldCheck size={30} className="text-primary shrink-0" />
+            <p className="font-heading font-semibold text-primary">
+              Her projemiz 2 yıl işçilik garantisi kapsamındadır.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <CTABanner />
+
     </>
   );
 }

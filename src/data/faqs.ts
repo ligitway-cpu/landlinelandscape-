@@ -14,7 +14,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Tasarım Süreci',
     question: 'Peyzaj tasarım süreci nasıl işler?',
     answer:
-      'Ücretsiz keşif görüşmesi ile başlıyor, arazi analizi ve ihtiyaç tespiti yapıyoruz. Ardından konsept, 3D görselleştirme ve son tasarım aşamalarını birlikte değerlendiriyoruz.',
+      'Süreç şu 4 adımdan oluşur: (1) Ücretsiz keşif görüşmesi — arazinizi yerinde inceler, beklentilerinizi dinleriz. (2) Konsept ve 3D görselleştirme — mekânınıza özel tasarımı dijital ortamda sunuyoruz. (3) Uygulama — anlaşılan takvimde saha ekibimizle çalışmaya başlıyoruz. (4) Teslim ve bakım — 2 yıl işçilik garantisiyle projeyi teslim alıyorsunuz.',
     order: 1,
   },
   {
@@ -23,7 +23,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Tasarım Süreci',
     question: 'İlk görüşmede neler konuşulur?',
     answer:
-      'Yaşam tarzınızı, beklentilerinizi, bütçenizi ve arazinin teknik özelliklerini ele alıyoruz. Bu görüşme sayesinde size en uygun yaklaşımı belirliyoruz.',
+      'İlk görüşmemiz yaklaşık 30–60 dakika, yerinde gerçekleşir. Bu görüşmede: arazi büyüklüğü ve mevcut durum, istediğiniz bitki ve estetik tarz, kullanım alışkanlıkları (çocuk/evcil hayvan/eğlence), tahmini bütçe aralığı ve projenin zaman çerçevesini konuşuruz. Bu görüşme tamamen ücretsizdir.',
     order: 2,
   },
   {
@@ -32,7 +32,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Fiyatlandırma',
     question: 'Maliyetler nasıl belirlenir?',
     answer:
-      'Maliyetler; alan büyüklüğü, kullanılan malzemeler, bitki seçimleri ve uygulama detaylarına göre şekillenir. Şeffaf bir kalem-kalem teklif sunuyoruz.',
+      'Fiyatlandırma şu faktörlere göre değişir: alan büyüklüğü (m²), zemin hazırlığı ve altyapı durumu, seçilen bitki türleri ve malzemeler, sulama ve aydınlatma gibi ek sistemler. Küçük konut bahçeleri (50–150 m²) ile büyük ticari projeler (1.000+ m²) için fiyat aralıkları önemli ölçüde farklılık gösterir. Kesin teklif için ücretsiz keşif görüşmemiz gereklidir.',
     order: 3,
   },
   {
@@ -41,7 +41,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Fiyatlandırma',
     question: 'Keşif görüşmesi ücretli mi?',
     answer:
-      'Hayır. Ankara ve yakın çevresinde ilk keşif görüşmesi tamamen ücretsizdir. Yalnızca uzak lokasyonlarda ulaşım katkısı talep edebiliriz.',
+      'Hayır, ilk keşif görüşmemiz tamamen ücretsizdir. Uzmanımız arazinizi ziyaret eder, ihtiyaçlarınızı değerlendirir ve size ön bir değerlendirme sunar. Herhangi bir taahhüt gerektirmez.',
     order: 4,
   },
   {
@@ -50,7 +50,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Bitkiler & Malzeme',
     question: 'Hangi bitkileri tercih ediyorsunuz?',
     answer:
-      'Ankara ikliminde uzun ömürlü, düşük su tüketimli ve estetik açıdan güçlü bitkileri önceliklendiriyoruz. Yerel ve adapte türler her zaman ilk tercihimizdir.',
+      'Önceliğimiz Ankara iklimine uyumlu, kışa dayanıklı ve az su tüketimiyle gelişen yerel bitki türleridir. Lavanta, adaçayı, muhabbet çiçeği, ahlat, boylu ardıç ve mevsimlik çiçekler sıkça kullandığımız türler arasındadır. Her projeyi güneş alımı, rüzgar ve toprak yapısına göre özelleştiriyoruz.',
     order: 5,
   },
   {
@@ -59,7 +59,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Bitkiler & Malzeme',
     question: 'Sürdürülebilir malzemeler kullanıyor musunuz?',
     answer:
-      'Evet. Geri dönüştürülebilir taş, doğal ahşap ve verimli sulama sistemleri standart paletimizin bir parçasıdır.',
+      'Evet. Geri dönüştürülmüş taş ve beton, doğal ahşap, yağmur suyu hasat sistemleri, organik gübre ve biyolojik zararlı kontrolü standart yaklaşımımızın parçasıdır. Taleple tam organik ve sertifikalı sürdürülebilir proje de gerçekleştirebiliyoruz.',
     order: 6,
   },
   {
@@ -68,7 +68,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Proje & Bakım',
     question: 'Proje süresi ne kadar sürer?',
     answer:
-      'Tasarım süreci ortalama 2–4 hafta, uygulama ise proje ölçeğine bağlı olarak 3 hafta ile 6 ay arasında değişir. Net takvimi sözleşme öncesi paylaşıyoruz.',
+      'Proje büyüklüğüne göre değişir: Küçük konut bahçeleri (50–150 m²) 1–3 hafta, orta ölçekli projeler (150–500 m²) 3–6 hafta, büyük ticari veya kamusal projeler 6–12 hafta sürebilir. İlk görüşmede tahmini takvimi sizinle paylaşırız. Sözleşmede belirtilen tarihe uyumu garanti ediyoruz.',
     order: 7,
   },
   {
@@ -77,7 +77,34 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Proje & Bakım',
     question: 'Bakım hizmeti sunuyor musunuz?',
     answer:
-      'Evet. Aylık, mevsimsel veya yıllık bakım anlaşmaları yapıyoruz. Uygulamasını yaptığımız ya da daha önce başka firmaların kurduğu bahçelere bakım veriyoruz.',
+      'Evet, yıllık bakım anlaşmalarımızla bahçenizi dört mevsim canlı tutuyoruz. Bakım paketlerimiz: aylık ziyaret, mevsimlik budama ve gübreleme, sulama sistemi kontrolü ve bitki sağlığı takibini kapsar. Projeyi bitirip gitmiyoruz — isteyenlerle uzun vadeli bakım ortaklığı kuruyoruz.',
     order: 8,
+  },
+  {
+    id: '9',
+    category: 'proje',
+    categoryLabel: 'Proje & Bakım',
+    question: 'Ankara dışında hizmet veriyor musunuz?',
+    answer:
+      'Öncelikli hizmet bölgemiz Ankara ve çevresidir. Büyük ölçekli projeler için Ankara dışı talepler değerlendirilebilir. Detaylar için bize ulaşın.',
+    order: 9,
+  },
+  {
+    id: '10',
+    category: 'proje',
+    categoryLabel: 'Proje & Bakım',
+    question: 'Projede garanti var mı?',
+    answer:
+      'Tüm uygulama projelerimizde 2 yıl işçilik garantisi sunuyoruz. Dikilen bitkiler ilk yılda tutmadığında ücretsiz değiştiriyoruz. Sulama, aydınlatma ve yapı işleri için de 2 yıl geçerlidir.',
+    order: 10,
+  },
+  {
+    id: '11',
+    category: 'fiyat',
+    categoryLabel: 'Fiyatlandırma',
+    question: 'Ödeme koşulları nelerdir?',
+    answer:
+      'Genellikle 3 aşamalı ödeme uyguluyoruz: sözleşme imzalanırken %30 ön ödeme, uygulama başlangıcında %40, teslimatta %30. Büyük projeler için farklı taksit yapıları da görüşülebilir.',
+    order: 11,
   },
 ];

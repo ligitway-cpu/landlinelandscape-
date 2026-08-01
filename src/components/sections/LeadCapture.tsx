@@ -40,7 +40,7 @@ export function LeadCapture() {
   };
 
   return (
-    <section className="section-y bg-primary border-t-[3px] border-secondary dark-section">
+    <section id="teklif" className="section-y bg-primary border-t-[3px] border-secondary dark-section">
       <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
         <motion.div
           initial="hidden"
