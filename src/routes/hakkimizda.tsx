@@ -7,7 +7,6 @@ import { CopperRule } from "@/components/ui/copper-rule";
 import { SectionLabel } from "@/components/ui/section-label";
 import { fadeUp, staggerContainer } from "@/lib/variants";
 import { contact } from "@/data/contact";
-import teamImg from "@/assets/team.jpg";
 import founderImg from "@/assets/founder.jpg";
 
 export const Route = createFileRoute("/hakkimizda")({
