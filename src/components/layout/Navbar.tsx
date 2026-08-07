@@ -75,7 +75,7 @@ export function Navbar() {
             'lg:hidden inline-flex items-center justify-center rounded-lg p-2 transition-colors',
             open
               ? 'bg-secondary text-primary-dark'
-              : 'bg-primary-dark/60 backdrop-blur-sm text-dark-text hover:bg-primary-dark/80',
+              : 'bg-primary-dark text-dark-text hover:bg-dark-bg-deep',
           )}
         >
           {open ? <X size={26} /> : <Menu size={26} />}
@@ -89,7 +89,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden fixed inset-0 top-[72px] bg-dark-bg-deep z-40"
+            className="lg:hidden fixed inset-0 top-[72px] bg-primary-dark z-40"
           >
             <motion.nav
               initial="hidden"

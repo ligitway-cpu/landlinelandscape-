@@ -19,8 +19,12 @@ export const contact = {
   serviceAreaShort: 'Ankara & Türkiye Geneli',
   serviceAreaLong:
     "Ankara merkezli olmakla birlikte İstanbul, Çanakkale, Tekirdağ, İzmir, Antalya, Bodrum ve Türkiye'nin birçok iline hizmet veriyoruz.",
+  paymentTermsTitle: 'Şeffaf Ödeme Koşulları',
+  paymentTermsHeadline: '%50 İş Başlangıcında · %50 Teslimatta',
+  paymentTermsNote: 'Sürpriz yoktur. Tüm kalemler yazılı sözleşmeyle belirlenir.',
+  paymentMethods: 'Kabul ettiğimiz yöntemler: Banka transferi, EFT, kredi kartı.',
   paymentNote:
-    'Ödeme koşulları proje kapsamına göre belirlenmektedir. Detaylar için ücretsiz keşif görüşmemizde bilgi alabilirsiniz.',
+    '%50 iş başlangıcında, %50 teslimatta. Sürpriz yoktur. Tüm kalemler yazılı sözleşmeyle belirlenir.',
   guarantee: 'Bitkiler, yapısal işler, sulama sistemi ve rulo çim dahil — 2 Yıl Tam Garanti',
   social: {
     instagram: 'https://www.instagram.com/landline.landscape',

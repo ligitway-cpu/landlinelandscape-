@@ -17,12 +17,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Ankara'da hayalinizdeki bahçeyi gerçeğe dönüştürüyoruz. Peyzaj tasarımı, uygulama, bakım. Ücretsiz keşif için arayın.",
+          "Türkiye genelinde 15+ yıllık deneyimle peyzaj tasarımı, uygulama ve bakım. Ankara merkezli, 250+ proje, 2 yıl garanti. İstanbul, İzmir, Antalya ve daha fazlası. Ücretsiz keşif için arayın.",
       },
       { property: "og:title", content: "Landline Landscape — Peyzaj Sanatı Bir Çizgiyle Başlar" },
       {
         property: "og:description",
-        content: "Ankara'da 15+ yıllık deneyimle peyzaj tasarımı, uygulama ve bakım.",
+        content: "Ankara merkezli, Türkiye genelinde 15+ yıllık deneyimle peyzaj tasarımı, uygulama ve bakım.",
       },
     ],
   }),

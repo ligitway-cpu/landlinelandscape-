@@ -13,7 +13,7 @@ export const Route = createFileRoute("/projeler")({
       { title: "Projeler | Landline Landscape" },
       {
         name: "description",
-        content: "Ankara ve çevresinde tamamladığımız konut, ticari, kamusal ve sürdürülebilir peyzaj projeleri.",
+        content: "Ankara, İstanbul, İzmir ve Türkiye genelinde tamamlanan peyzaj projeleri. Villa bahçelerinden kurumsal kampüslere 250+ proje.",
       },
       { property: "og:title", content: "Projeler | Landline Landscape" },
       {

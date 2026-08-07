@@ -86,7 +86,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Proje & Bakım',
     question: 'Ankara dışında hizmet veriyor musunuz?',
     answer:
-      "Ankara merkezli olmakla birlikte İstanbul, Çanakkale, Tekirdağ, İzmir, Antalya, Bodrum ve Türkiye'nin birçok iline hizmet veriyoruz.",
+      "Evet. Ankara merkezli olmakla birlikte İstanbul, Çanakkale, Tekirdağ, İzmir, Antalya, Bodrum ve Türkiye'nin birçok iline hizmet veriyoruz. Büyük ölçekli projeler için her lokasyon değerlendirilebilir. Detaylar için bize ulaşın.",
     order: 9,
   },
   {
@@ -104,7 +104,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Fiyatlandırma',
     question: 'Ödeme koşulları nelerdir?',
     answer:
-      'Ödeme koşulları proje kapsamına göre belirlenmektedir. Detaylar için ücretsiz keşif görüşmemizde bilgi alabilirsiniz.',
+      '%50 iş başlangıcında, %50 teslimatta çalışıyoruz. Tüm fiyatlar başlamadan önce yazılı sözleşmeyle netleştirilir. Proje süresince herhangi bir ek veya sürpriz ücret uygulanmaz.',
     order: 11,
   },
 ];

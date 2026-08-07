@@ -43,7 +43,7 @@ export const Route = createFileRoute("/hizmetler")({
       { title: "Hizmetler | Landline Landscape" },
       {
         name: "description",
-        content: "Peyzaj tasarımı, uygulama, bakım ve sürdürülebilir peyzaj — Ankara'da uçtan uca hizmet.",
+        content: "Ankara ve Türkiye genelinde profesyonel peyzaj hizmetleri. Tasarım, uygulama, sulama, aydınlatma, bakım. 2 yıl garanti. Ücretsiz teklif alın.",
       },
       { property: "og:title", content: "Hizmetler | Landline Landscape" },
       {
@@ -295,7 +295,10 @@ function HizmetlerPage() {
         </div>
       </section>
 
-      <CTABanner />
+      <CTABanner
+        title="Bahçe Projenizi Hayata Geçirelim"
+        description="Ankara merkezli, Türkiye genelinde hizmet. İstanbul · İzmir · Antalya · Bodrum · Çanakkale · Tekirdağ ve daha fazlası."
+      />
 
     </>
   );
