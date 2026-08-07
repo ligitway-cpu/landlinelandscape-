@@ -66,7 +66,7 @@ export function TrustBar() {
                 transform: inView ? 'translateY(0)' : 'translateY(16px)',
                 transition: `opacity 400ms ease-out ${i * 80}ms, transform 400ms ease-out ${i * 80}ms`,
               }}
-              className={`group flex items-center gap-2.5 py-3 px-3 md:px-4 rounded-[4px] border border-transparent hover:border-primary/25 hover:scale-[1.04] duration-200 ${
+              className={`group flex items-center gap-2.5 py-3 px-3 md:px-4 rounded-[4px] hover:ring-1 hover:ring-primary/25 hover:scale-[1.04] duration-200 ${
                 i === items.length - 1 && items.length % 2 === 1
                   ? 'col-span-2 justify-center md:justify-start'
                   : ''
