@@ -19,11 +19,9 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { location } = useRouterState();
-  const isHome = location.pathname === '/';
-  const transparent = isHome && !scrolled;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => setScrolled(window.scrollY > 0);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -36,12 +34,11 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        'fixed top-0 inset-x-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-300',
-        transparent
-          ? 'bg-transparent border-b border-transparent'
-          : 'bg-primary-dark/95 backdrop-blur-md border-b border-white/10',
+        'fixed top-0 inset-x-0 z-50 bg-primary-dark border-b border-white/10 transition-all duration-300',
+        scrolled && 'shadow-[0_2px_12px_rgba(0,0,0,0.15)]',
       )}
     >
+
       <div className="container-x flex h-[72px] items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <Leaf size={22} className="text-secondary group-hover:rotate-12 transition-transform" />
