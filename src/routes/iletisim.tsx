@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, MessageCircle, Mail, MapPin, Clock, Instagram, Send } from "lucide-react";
+import { Phone, MessageCircle, Mail, MapPin, Clock, Instagram, Send, Globe, Wallet } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { CopperRule } from "@/components/ui/copper-rule";
 import { Button, ButtonLink } from "@/components/ui/brand-button";
@@ -135,7 +135,20 @@ function IletisimPage() {
               </InfoCard>
 
               <InfoCard icon={Clock} label="Çalışma Saatleri">
-                {contact.hours}
+                <div className="space-y-1">
+                  <p>{contact.hours}</p>
+                  <p className="text-sm font-normal text-text-muted">{contact.hoursNote}</p>
+                </div>
+              </InfoCard>
+
+              <InfoCard icon={Globe} label="Hizmet Bölgesi">
+                {contact.serviceArea}
+              </InfoCard>
+
+              <InfoCard icon={Wallet} label="Ödeme">
+                <p className="text-sm font-normal text-text-muted leading-relaxed">
+                  {contact.paymentNote}
+                </p>
               </InfoCard>
 
               <InfoCard icon={Instagram} label="Instagram">

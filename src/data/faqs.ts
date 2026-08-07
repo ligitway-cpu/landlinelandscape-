@@ -86,7 +86,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Proje & Bakım',
     question: 'Ankara dışında hizmet veriyor musunuz?',
     answer:
-      'Öncelikli hizmet bölgemiz Ankara ve çevresidir. Büyük ölçekli projeler için Ankara dışı talepler değerlendirilebilir. Detaylar için bize ulaşın.',
+      "Ankara merkezli olmakla birlikte İstanbul, Çanakkale, Tekirdağ, İzmir, Antalya, Bodrum ve Türkiye'nin birçok iline hizmet veriyoruz.",
     order: 9,
   },
   {
@@ -95,7 +95,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Proje & Bakım',
     question: 'Projede garanti var mı?',
     answer:
-      'Tüm uygulama projelerimizde 2 yıl işçilik garantisi sunuyoruz. Dikilen bitkiler ilk yılda tutmadığında ücretsiz değiştiriyoruz. Sulama, aydınlatma ve yapı işleri için de 2 yıl geçerlidir.',
+      'Bitkiler, yapısal işler, sulama sistemi ve rulo çim dahil — 2 Yıl Tam Garanti.',
     order: 10,
   },
   {
@@ -104,7 +104,7 @@ export const faqs: FAQ[] = [
     categoryLabel: 'Fiyatlandırma',
     question: 'Ödeme koşulları nelerdir?',
     answer:
-      'Genellikle 3 aşamalı ödeme uyguluyoruz: sözleşme imzalanırken %30 ön ödeme, uygulama başlangıcında %40, teslimatta %30. Büyük projeler için farklı taksit yapıları da görüşülebilir.',
+      'Ödeme koşulları proje kapsamına göre belirlenmektedir. Detaylar için ücretsiz keşif görüşmemizde bilgi alabilirsiniz.',
     order: 11,
   },
 ];

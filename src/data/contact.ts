@@ -13,7 +13,15 @@ export const contact = {
     full: 'Yenimahalle Yakacık, 3602. Sokak, Bina: 4, Daire: 4, 06560 Yenimahalle / Ankara',
     mapsUrl: 'https://maps.google.com/?q=Yenimahalle+Yakac%C4%B1k+3602+Sokak+Ankara',
   },
-  hours: 'Pzt – Cum: 09:00 – 18:00',
+  hours: 'Pazartesi – Pazar: Haftanın 7 Günü',
+  hoursNote: 'Haftanın 7 Günü Hizmetinizdeyiz',
+  serviceArea: 'Türkiye Genelinde Hizmet',
+  serviceAreaShort: 'Ankara & Türkiye Geneli',
+  serviceAreaLong:
+    "Ankara merkezli olmakla birlikte İstanbul, Çanakkale, Tekirdağ, İzmir, Antalya, Bodrum ve Türkiye'nin birçok iline hizmet veriyoruz.",
+  paymentNote:
+    'Ödeme koşulları proje kapsamına göre belirlenmektedir. Detaylar için ücretsiz keşif görüşmemizde bilgi alabilirsiniz.',
+  guarantee: 'Bitkiler, yapısal işler, sulama sistemi ve rulo çim dahil — 2 Yıl Tam Garanti',
   social: {
     instagram: 'https://www.instagram.com/landline.landscape',
     instagramHandle: '@landline.landscape',

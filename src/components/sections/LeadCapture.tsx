@@ -8,9 +8,11 @@ import { contact } from '@/data/contact';
 import { fadeUp, staggerContainer } from '@/lib/variants';
 
 const bullets = [
-  'Ücretsiz ilk görüşme ve arazi analizi',
-  '3D görselleştirme dahil konsept sunumu',
-  'Teslimatta 2 yıl işçilik garantisi',
+  'İş öncesi 3D görselleştirme',
+  'Yerinde toprak ve güneş analizi',
+  '2 yıl tam kapsam garanti',
+  'Ankara iklimine uygun yerel bitki uzmanlığı',
+  'Proje boyunca özel takip sistemi',
 ];
 
 const serviceOptions = [

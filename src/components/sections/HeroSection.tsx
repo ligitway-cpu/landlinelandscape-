@@ -37,7 +37,7 @@ export function HeroSection() {
           className="max-w-3xl"
         >
           <motion.span variants={item} className="section-label !text-secondary-pale">
-            15 Yıl · 250+ Proje · Çankaya'dan Keçiören'e Tüm Ankara
+            15 Yıl · 250+ Proje · Türkiye Genelinde Hizmet
           </motion.span>
 
           <motion.h1
@@ -72,7 +72,7 @@ export function HeroSection() {
               </ButtonLink>
             </div>
             <p className="mt-3 text-sm text-secondary-pale">
-              ✓ Ücretsiz keşif · ✓ 2 yıl garanti · ✓ Şeffaf fiyatlandırma
+              ✓ Ücretsiz keşif · ✓ Bitkiler, yapısal işler, sulama sistemi ve rulo çim dahil — 2 Yıl Tam Garanti
             </p>
           </motion.div>
 
