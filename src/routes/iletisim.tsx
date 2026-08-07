@@ -14,12 +14,12 @@ export const Route = createFileRoute("/iletisim")({
       { title: "İletişim | Landline Landscape" },
       {
         name: "description",
-        content: "Bize ulaşın: +90 531 715 37 79 · iletisim@landlinelandscape.com · Yenimahalle / Ankara.",
+        content: "Landline Landscape iletişim — +90 531 715 37 79. Ankara merkezli, Türkiye genelinde hizmet. Ücretsiz keşif için bugün arayın.",
       },
       { property: "og:title", content: "İletişim | Landline Landscape" },
       {
         property: "og:description",
-        content: "Ankara'da ücretsiz keşif için bize ulaşın. Telefon, WhatsApp, e-posta.",
+        content: "Ankara merkezli, Türkiye genelinde hizmet. Ücretsiz keşif için bize ulaşın.",
       },
     ],
   }),
@@ -146,9 +146,15 @@ function IletisimPage() {
               </InfoCard>
 
               <InfoCard icon={Wallet} label="Ödeme">
-                <p className="text-sm font-normal text-text-muted leading-relaxed">
-                  {contact.paymentNote}
-                </p>
+                <div className="space-y-1">
+                  <p className="text-sm font-bold text-primary">{contact.paymentTermsHeadline}</p>
+                  <p className="text-sm font-normal text-text-muted leading-relaxed">
+                    {contact.paymentTermsNote}
+                  </p>
+                  <p className="text-xs font-normal text-text-light leading-relaxed">
+                    {contact.paymentMethods}
+                  </p>
+                </div>
               </InfoCard>
 
               <InfoCard icon={Instagram} label="Instagram">

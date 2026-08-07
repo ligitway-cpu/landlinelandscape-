@@ -15,12 +15,12 @@ export const Route = createFileRoute("/hakkimizda")({
       { title: "Hakkımızda | Landline Landscape" },
       {
         name: "description",
-        content: "15+ yıllık deneyimle Ankara'nın önde gelen peyzaj tasarım firması Landline Landscape.",
+        content: "Landline Landscape — 2009'dan bu yana Ankara merkezli, Türkiye genelinde peyzaj mimarlığı ve uygulama. Kurucu Sevgi Bozdağ liderliğinde 40+ uzman ekip, 250+ tamamlanan proje.",
       },
       { property: "og:title", content: "Hakkımızda | Landline Landscape" },
       {
         property: "og:description",
-        content: "Ankara'nın güvenilir peyzaj partneri. Hikayemizi, değerlerimizi ve ekibimizi keşfedin.",
+        content: "Türkiye genelinde güvenilir peyzaj partneri. Hikayemizi, değerlerimizi ve ekibimizi keşfedin.",
       },
     ],
   }),
@@ -66,7 +66,7 @@ function HakkimizdaPage() {
     <>
       <PageHero
         label="Hakkımızda"
-        title="Ankara'nın Güvenilir Peyzaj Partneri"
+        title="Türkiye Genelinde Güvenilir Peyzaj Partneri"
         breadcrumb={[{ label: "Anasayfa", to: "/" }, { label: "Hakkımızda" }]}
       />
 
@@ -100,7 +100,7 @@ function HakkimizdaPage() {
               Çizgilerin ardındaki ekip
             </motion.h3>
             <motion.p variants={fadeUp}>
-              Landline Landscape, 2011'den bu yana Ankara'da peyzaj sanatını farklı bir lige
+              Landline Landscape, 2011'den bu yana Ankara'da ve Türkiye'nin dört bir yanında peyzaj sanatını farklı bir lige
               taşımak için çalışan, çok disiplinli bir tasarım ve uygulama atölyesidir. Peyzaj
               mimarları, bahçe ustaları, sulama mühendisleri ve bakım teknisyenlerinden oluşan
               ekibimizle her projeyi tek bir el gibi yönetiyoruz.

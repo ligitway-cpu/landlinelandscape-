@@ -16,7 +16,7 @@ export const Route = createFileRoute("/sss")({
       { title: "SSS | Landline Landscape" },
       {
         name: "description",
-        content: "Peyzaj tasarımı, fiyatlandırma, bitki seçimi ve bakım hakkında sıkça sorulan sorular.",
+        content: "Peyzaj tasarımı fiyatları, ödeme koşulları, garanti ve hizmet bölgesi hakkında sıkça sorulan sorular. Landline Landscape — Ankara ve Türkiye geneli.",
       },
       { property: "og:title", content: "Sıkça Sorulan Sorular | Landline Landscape" },
       {
