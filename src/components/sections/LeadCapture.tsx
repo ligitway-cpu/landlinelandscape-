@@ -73,6 +73,16 @@ export function LeadCapture() {
 
           <motion.p
             variants={fadeUp}
+            className="mt-5 flex items-start gap-3 text-sm text-dark-text/90"
+          >
+            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-secondary">
+              <Check size={13} strokeWidth={3} className="text-white" />
+            </span>
+            %50 başlangıçta, %50 teslimatta — şeffaf ve yazılı sözleşme
+          </motion.p>
+
+          <motion.p
+            variants={fadeUp}
             className="mt-6 flex items-center gap-2 text-xs text-secondary-pale"
           >
             <Zap size={14} /> Nisan–Ekim sezonu dolmaktadır. Yerinizi bugün ayırtın.
