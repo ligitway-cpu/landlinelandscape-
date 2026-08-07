@@ -16,11 +16,11 @@ export function GuaranteeStrip() {
           <ShieldCheck size={44} className="text-primary mx-auto md:mx-0 shrink-0" strokeWidth={1.6} />
           <div className="flex-1">
             <p className="font-heading font-bold text-lg text-primary leading-snug">
-              Tüm Projelerimizde 2 Yıl İşçilik Garantisi
+              Bitkiler, yapısal işler, sulama sistemi ve rulo çim dahil — 2 Yıl Tam Garanti
             </p>
             <p className="mt-1 text-sm text-text-muted leading-relaxed max-w-2xl">
-              Dikilen bitkiler 1. yılı geçemezse ücretsiz değiştiriyoruz. Sulama sistemi ve
-              yapı işleri 2 yıl garantili.
+              Tüm projelerimiz kapsam dahilindeki her kalemle birlikte 2 yıl boyunca
+              garantimiz altındadır.
             </p>
           </div>
           <div className="shrink-0">

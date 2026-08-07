@@ -37,8 +37,8 @@ const steps = [
   {
     Icon: ShieldCheck,
     title: 'Teslim & Garanti',
-    description: 'Projenizi teslim alır, 2 yıl işçilik garantimizle arkamızda duruyoruz.',
-    badge: '2 Yıl Garanti',
+    description: 'Bitkiler, yapısal işler, sulama sistemi ve rulo çim dahil — 2 Yıl Tam Garanti.',
+    badge: '2 Yıl Tam Garanti',
   },
 ];
 

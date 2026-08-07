@@ -3,8 +3,8 @@ import { ShieldCheck, Star, CalendarClock, MapPin, PhoneCall } from 'lucide-reac
 const items = [
   {
     Icon: ShieldCheck,
-    line1: '2 Yıl İşçilik Garantisi',
-    line2: 'Tüm Projelerimizde',
+    line1: '2 Yıl Tam Garanti',
+    line2: 'Bitki, yapısal iş, sulama ve rulo çim dahil',
   },
   {
     Icon: Star,
@@ -14,13 +14,13 @@ const items = [
   },
   {
     Icon: CalendarClock,
-    line1: '15+ Yıl Deneyim',
-    line2: "Ankara'da Aktif",
+    line1: '7/7 Hizmet',
+    line2: 'Haftanın 7 günü',
   },
   {
     Icon: MapPin,
-    line1: "Tüm Ankara'ya Hizmet",
-    line2: "Çankaya'dan Sincan'a",
+    line1: 'Türkiye Genelinde',
+    line2: 'İstanbul, İzmir, Antalya ve daha fazlası',
   },
   {
     Icon: PhoneCall,
