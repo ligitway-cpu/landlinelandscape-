@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { Instagram, MessageCircle, Phone, Mail, MapPin, Clock, Leaf } from 'lucide-react';
+import { Instagram, MessageCircle, Phone, Mail, MapPin, Clock, Globe, Leaf } from 'lucide-react';
 import { contact } from '@/data/contact';
 import { CopperRule } from '@/components/ui/copper-rule';
 
@@ -144,7 +144,15 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3 text-dark-text/75">
                 <Clock size={16} className="mt-1 shrink-0 text-secondary" />
-                <span>{contact.hours}</span>
+                <span>
+                  {contact.hours}
+                  <br />
+                  Haftanın 7 Günü Hizmetinizdeyiz
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-dark-text/75">
+                <Globe size={16} className="mt-1 shrink-0 text-secondary" />
+                <span>{contact.serviceAreaShort}</span>
               </li>
             </ul>
           </div>

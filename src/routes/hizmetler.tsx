@@ -13,6 +13,7 @@ import {
   CloudRain,
   Armchair,
   ShieldCheck,
+  MapPin,
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
@@ -25,6 +26,14 @@ import { ButtonLink } from "@/components/ui/brand-button";
 import { services } from "@/data/services";
 import { contact } from "@/data/contact";
 import { fadeUp, staggerContainer } from "@/lib/variants";
+
+const differentiators = [
+  "İş öncesi 3D görselleştirme",
+  "Yerinde toprak ve güneş analizi",
+  "2 yıl tam kapsam garanti",
+  "Ankara iklimine uygun yerel bitki uzmanlığı",
+  "Proje boyunca özel takip sistemi",
+];
 
 const icons: Record<string, LucideIcon> = { PenTool, Hammer, Scissors, Sprout };
 
@@ -243,14 +252,45 @@ function HizmetlerPage() {
         </div>
       </section>
 
-      {/* Guarantee note */}
-      <section className="bg-white pb-4 pt-14">
+      {/* Differentiators */}
+      <section className="bg-white pt-14">
         <div className="container-x">
+          <div className="max-w-2xl mb-8">
+            <SectionLabel>Neden Landline?</SectionLabel>
+            <h2 className="!text-primary">Bizi Farklı Kılan 5 Avantaj</h2>
+            <CopperRule />
+          </div>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {differentiators.map((d) => (
+              <li
+                key={d}
+                className="flex items-start gap-3 rounded-xl border border-border bg-surface px-5 py-4 text-text"
+              >
+                <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-secondary">
+                  <Check size={13} strokeWidth={3} className="text-white" />
+                </span>
+                <span className="text-sm leading-relaxed">{d}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Guarantee + service area */}
+      <section className="bg-white pb-4 pt-10">
+        <div className="container-x space-y-4">
           <div className="flex items-center gap-4 rounded-xl border border-border bg-primary/5 px-6 py-5">
             <ShieldCheck size={30} className="text-primary shrink-0" />
-            <p className="font-heading font-semibold text-primary">
-              Her projemiz 2 yıl işçilik garantisi kapsamındadır.
-            </p>
+            <p className="font-heading font-semibold text-primary">{contact.guarantee}</p>
+          </div>
+          <div className="flex items-start gap-4 rounded-xl border border-border bg-surface px-6 py-5">
+            <MapPin size={28} className="text-secondary shrink-0" />
+            <div>
+              <p className="font-heading font-semibold text-primary">Hizmet Bölgemiz</p>
+              <p className="mt-1 text-sm text-text-muted leading-relaxed">
+                {contact.serviceAreaLong}
+              </p>
+            </div>
           </div>
         </div>
       </section>
