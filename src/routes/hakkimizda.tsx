@@ -8,6 +8,7 @@ import { SectionLabel } from "@/components/ui/section-label";
 import { fadeUp, staggerContainer } from "@/lib/variants";
 import { contact } from "@/data/contact";
 import teamImg from "@/assets/team.jpg";
+import founderImg from "@/assets/founder.jpg";
 
 export const Route = createFileRoute("/hakkimizda")({
   head: () => ({
@@ -55,7 +56,6 @@ const timeline = [
 ];
 
 const team = [
-  { initials: "LD", name: "Kurucu Ortak", title: "Peyzaj Mimarı, 15+ Yıl Deneyim" },
   { initials: "PY", name: "Proje Yöneticisi", title: "Saha Koordinasyonu, Uygulama" },
   { initials: "ZM", name: "Ziraat Mühendisi", title: "Bitki Sağlığı & Sulama Sistemleri" },
   { initials: "TU", name: "Tasarım Uzmanı", title: "3D Görselleştirme & Konsept" },
@@ -161,16 +161,20 @@ function HakkimizdaPage() {
             className="relative"
           >
             <img
-              src={teamImg}
-              alt="Landline Landscape ekibi"
+              src={founderImg}
+              alt="Sevgi Bozdağ — Landline Landscape kurucusu ve peyzaj mimarı"
               loading="lazy"
-              width={1280}
-              height={960}
-              className="rounded-xl shadow-card w-full object-cover aspect-[4/3]"
+              width={1024}
+              height={1280}
+              className="rounded-xl shadow-card w-full object-cover aspect-[4/5]"
             />
+            <div className="mt-5">
+              <p className="font-heading text-2xl font-bold !text-primary">Sevgi Bozdağ</p>
+              <p className="mt-1 text-text-muted">Kurucu &amp; Peyzaj Mimarı</p>
+            </div>
           </motion.div>
           <div>
-            <SectionLabel>Uzman Ekibimiz</SectionLabel>
+            <SectionLabel>Kurucumuz</SectionLabel>
             <h2 className="!text-primary">Tasarımı sahada gerçeğe dönüştüren ekip</h2>
             <CopperRule />
             <p className="text-text-muted">
