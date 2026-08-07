@@ -1,30 +1,20 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { MessageCircle, Calendar, X } from 'lucide-react';
+import { MessageCircle, Calendar } from 'lucide-react';
 import { useNavigate, useRouterState } from '@tanstack/react-router';
 import { contact } from '@/data/contact';
 
 export function FloatingCta() {
   const [visible, setVisible] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
   const navigate = useNavigate();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   useEffect(() => {
-    if (sessionStorage.getItem('floating-cta-dismissed') === '1') {
-      setDismissed(true);
-      return;
-    }
     const onScroll = () => setVisible(window.scrollY > 400);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  const dismiss = () => {
-    sessionStorage.setItem('floating-cta-dismissed', '1');
-    setDismissed(true);
-  };
 
   const onQuote = () => {
     if (pathname === '/') {
@@ -33,8 +23,6 @@ export function FloatingCta() {
       navigate({ to: '/iletisim' });
     }
   };
-
-  if (dismissed) return null;
 
   return (
     <AnimatePresence>
@@ -46,14 +34,6 @@ export function FloatingCta() {
           transition={{ duration: 0.3, ease: 'easeOut' }}
           className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
         >
-          <button
-            onClick={dismiss}
-            aria-label="Kapat"
-            className="absolute -top-2 -right-2 z-10 grid size-6 place-items-center rounded-full bg-primary text-white shadow-soft hover:bg-primary-dark transition-colors"
-          >
-            <X size={13} strokeWidth={3} />
-          </button>
-
           <button
             onClick={onQuote}
             className="hidden md:inline-flex h-12 w-[140px] items-center justify-center gap-2 rounded-full bg-secondary text-white font-body font-bold text-sm uppercase tracking-wider shadow-card hover:bg-secondary-dark transition-colors"
