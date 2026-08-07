@@ -10,7 +10,7 @@ import {
 import appCss from "../styles.css?url";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { WhatsAppFloating } from "@/components/ui/whatsapp-floating";
+import { FloatingCta } from "@/components/ui/floating-cta";
 import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
@@ -128,7 +128,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
-      <WhatsAppFloating />
+      <FloatingCta />
       <Toaster richColors position="top-center" />
     </QueryClientProvider>
   );

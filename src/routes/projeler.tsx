@@ -70,9 +70,10 @@ function ProjelerPage() {
       <ProjectsShowcase items={list} showHeader={false} showCta={false} />
 
       <CTABanner
-        title="Projenizi Hayal Edin, Birlikte Gerçekleştirelim"
-        description="Her ölçekteki peyzaj projesi için bize ulaşın. Konseptten teslimata kadar yanınızdayız."
+        title="Sıradaki Proje Sizin Olabilir"
+        description="250+ tamamlanmış projede edindiğimiz deneyimle bahçenizi dönüştürelim."
       />
+
     </>
   );
 }
