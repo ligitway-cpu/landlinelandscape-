@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useRouterState } from '@tanstack/react-router';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X, Leaf, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { ButtonLink } from '@/components/ui/brand-button';
