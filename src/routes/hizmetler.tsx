@@ -62,36 +62,42 @@ const steps = [
   { n: 4, title: "Teslimat & Bakım", text: "Teslim sonrası bakım anlaşmasıyla bahçeniz dört mevsim güvende." },
 ];
 
-const extras: { icon: LucideIcon; title: string; text: string }[] = [
+const extras: { icon: LucideIcon; title: string; text: string; slug: string }[] = [
   {
     icon: Zap,
     title: "Bahçe Aydınlatması",
-    text: "Bahçenizi gece de yaşanabilir kılıyoruz. LED spot, güneş enerjili ve akıllı aydınlatma sistemleri kuruyoruz.",
+    text: "LED spot, güneş enerjili ve akıllı aydınlatma sistemleriyle bahçenizi gece de yaşanabilir kılıyoruz.",
+    slug: "bahce-aydinlatmasi",
   },
   {
     icon: Droplets,
     title: "Sulama Sistemleri",
-    text: "Otomatik damla sulama, sprinkler ve akıllı kontrol sistemleri ile su tasarrufu ve sağlıklı bitkiler. Yazın bahçenizi unutun.",
+    text: "Otomatik damla sulama ve sprinkler sistemleriyle su tasarrufu yapın, bitkileriniz her zaman sağlıklı kalsın.",
+    slug: "sulama-sistemleri",
   },
   {
     icon: Home,
     title: "Çatı & Teras Bahçeleri",
-    text: "Balkon ve çatı teraslarını yeşil yaşam alanlarına dönüştürüyoruz. Hafif substrat, özel bitki seçimi.",
+    text: "Kullanılmayan çatı ve teras alanlarını yeşil, yaşayan bahçelere dönüştürüyoruz.",
+    slug: "cati-teras-bahceleri",
   },
   {
     icon: Smile,
     title: "Çocuk Oyun Alanları",
-    text: "Güvenli zemin kaplamaları, doğal ahşap ve eğlenceli tasarımlarla çocuklara özel bahçe köşeleri.",
+    text: "Sertifikalı güvenlik zeminleri ve doğal ahşap malzemelerle çocuklara özel güvenli bahçe köşeleri.",
+    slug: "cocuk-oyun-alanlari",
   },
   {
     icon: CloudRain,
     title: "Yağmur Bahçeleri",
-    text: "Yağmur suyunu toprağa kazandıran, sel riskini azaltan ve biyoçeşitliği destekleyen sürdürülebilir bahçe sistemleri.",
+    text: "Yağmur suyunu toprağa kazandıran, sel riskini azaltan ve biyoçeşitliği destekleyen akıllı bahçe sistemleri.",
+    slug: "yagmur-bahceleri",
   },
   {
     icon: Armchair,
     title: "Dış Mekan Mobilya & Tasarım",
-    text: "Bahçenizin stiline uygun pergola, oturma grubu ve dış mekan mobilya seçimi ve yerleştirmesi.",
+    text: "Pergola, deck, oturma grubu ve gölgelik çözümleriyle bahçenizi konforlu bir yaşam alanına dönüştürün.",
+    slug: "dis-mekan-mobilya",
   },
 ];
 
@@ -163,7 +169,10 @@ function HizmetlerPage() {
                   ))}
                 </motion.ul>
                 <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
-                  <ButtonLink href="/iletisim" variant="primary">
+                  <ButtonLink href={`/hizmetler/${s.slug}`} variant="primary">
+                    Detayları Gör
+                  </ButtonLink>
+                  <ButtonLink href="/iletisim" variant="outline">
                     Teklif Al
                   </ButtonLink>
                   <ButtonLink
@@ -240,10 +249,11 @@ function HizmetlerPage() {
                 <CopperRule width="sm" />
                 <p className="text-sm text-text-muted leading-relaxed">{e.text}</p>
                 <Link
-                  to="/iletisim"
+                  to="/hizmetler/$slug"
+                  params={{ slug: e.slug }}
                   className="mt-4 inline-flex items-center gap-1.5 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors group/link"
                 >
-                  Bilgi Al
+                  Detayları Gör
                   <ArrowRight size={15} className="group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>

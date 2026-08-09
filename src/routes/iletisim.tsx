@@ -14,7 +14,7 @@ export const Route = createFileRoute("/iletisim")({
       { title: "İletişim | Landline Landscape" },
       {
         name: "description",
-        content: "Landline Landscape iletişim — +90 531 715 37 79. Ankara merkezli, Türkiye genelinde hizmet. Ücretsiz keşif için bugün arayın.",
+        content: "Landline Landscape iletişim — +90 531 715 37 79. Ankara merkezli, Türkiye genelinde hizmet. Haftanın 7 günü ücretsiz keşif görüşmesi için bugün arayın.",
       },
       { property: "og:title", content: "İletişim | Landline Landscape" },
       {
