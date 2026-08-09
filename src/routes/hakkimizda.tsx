@@ -184,7 +184,7 @@ function HakkimizdaPage() {
                 whileHover={{ y: -4 }}
                 className="rounded-xl border border-border bg-white p-7 shadow-soft hover:border-secondary hover:shadow-card transition-[border-color,box-shadow] duration-300"
               >
-                <div className="size-13 size-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                <div className="size-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
                   <c.icon size={26} className="text-primary" />
                 </div>
                 <h3 className="!text-primary text-lg font-heading font-bold">{c.title}</h3>
