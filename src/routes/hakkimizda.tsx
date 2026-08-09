@@ -1,13 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Users, Leaf, Lightbulb } from "lucide-react";
+import { Award, Eye, ShieldCheck, Map, Clock, Users, Phone } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
-import { CTABanner } from "@/components/sections/CTABanner";
 import { CopperRule } from "@/components/ui/copper-rule";
 import { SectionLabel } from "@/components/ui/section-label";
+import { ButtonLink } from "@/components/ui/brand-button";
 import { fadeUp, staggerContainer } from "@/lib/variants";
 import { contact } from "@/data/contact";
-import founderImg from "@/assets/founder.jpg";
+import founderAsset from "@/assets/sevgi-bozdag.jpg.asset.json";
 
 export const Route = createFileRoute("/hakkimizda")({
   head: () => ({
@@ -15,51 +15,77 @@ export const Route = createFileRoute("/hakkimizda")({
       { title: "Hakkımızda | Landline Landscape" },
       {
         name: "description",
-        content: "Landline Landscape — 2009'dan bu yana Ankara merkezli, Türkiye genelinde peyzaj mimarlığı ve uygulama. Kurucu Sevgi Bozdağ liderliğinde 40+ uzman ekip, 250+ tamamlanan proje.",
+        content:
+          "Landline Landscape — 2009'dan bu yana Ankara merkezli, Türkiye genelinde peyzaj mimarlığı ve uygulama. Kurucu Sevgi Bozdağ liderliğinde 40+ uzman ekip, 250+ tamamlanan proje.",
       },
       { property: "og:title", content: "Hakkımızda | Landline Landscape" },
       {
         property: "og:description",
-        content: "Türkiye genelinde güvenilir peyzaj partneri. Hikayemizi, değerlerimizi ve ekibimizi keşfedin.",
+        content:
+          "Türkiye genelinde güvenilir peyzaj partneri. Hikayemizi, değerlerimizi ve ekibimizi keşfedin.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://lush-landing-pages.lovable.app/hakkimizda" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://lush-landing-pages.lovable.app/hakkimizda" }],
   }),
   component: HakkimizdaPage,
 });
 
-const values = [
+const whyCards = [
+  {
+    icon: Award,
+    title: "15 Yıllık Deneyim",
+    text: "2009'dan bu yana Türkiye'nin farklı iklim ve coğrafyalarında başarıyla tamamlanan 250+ proje.",
+  },
+  {
+    icon: Eye,
+    title: "3D Önizleme Garantisi",
+    text: "Her projede uygulama başlamadan önce 3D görselleştirme sunuyoruz. Görmeden imza atmıyorsunuz.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "2 Yıl Tam Garanti",
+    text: "Bitkiler, yapı, sulama ve rulo çim dahil tüm işçilik 2 yıl garantilidir. Arkamızda duruyoruz.",
+  },
+  {
+    icon: Map,
+    title: "Türkiye Genelinde",
+    text: "Ankara merkezli, İstanbul, İzmir, Antalya, Bodrum, Çanakkale, Tekirdağ ve daha fazlasına hizmet.",
+  },
+  {
+    icon: Clock,
+    title: "Haftanın 7 Günü",
+    text: "Ulaşmak istediğinizde buradayız. Telefon, WhatsApp veya e-posta — 7 gün yanınızdayız.",
+  },
   {
     icon: Users,
-    title: "Müşteri Odaklı Hizmet",
-    text: "Her projeyi sizin yaşam tarzınız etrafında kurguluyoruz. Beklentinizin ötesine geçmek standardımız.",
-  },
-  {
-    icon: Leaf,
-    title: "Sürdürülebilirlik",
-    text: "Doğayla uyumlu, yerel bitki türlerine dayalı ve uzun ömürlü çözümler bizim için pazarlama değil, ilkedir.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Yenilikçi Çözümler",
-    text: "3D görselleştirme, akıllı sulama, modern malzemeler — geleneksel zanaatı çağdaş teknikle birleştiriyoruz.",
+    title: "40+ Uzman Ekip",
+    text: "Tasarımcılar, saha uygulama uzmanları, ziraat mühendisleri ve sulama teknisyenlerinden oluşan kadro.",
   },
 ];
 
 const timeline = [
-  { year: "2009", event: "Landline Landscape, Ankara'da peyzaj mühendisliği alanında kuruldu." },
-  { year: "2011", event: "İlk büyük konut projesi Çankaya'da tamamlandı. Ekip 5 kişiye ulaştı." },
-  { year: "2015", event: "Ticari peyzaj bölümü kuruldu. Kurumsal kampüs projeleri başladı." },
-  { year: "2019", event: "Sürdürülebilir peyzaj ve akıllı sulama sistemleri hizmet yelpazesine eklendi." },
-  { year: "2022", event: "100. proje teslim edildi. Ekip 25+ uzmanla büyüdü." },
-  { year: "2024", event: "250. proje tamamlandı. 40+ kişilik uzman kadro, Ankara genelinde aktif." },
+  { year: "2009", event: "Landline Landscape, Ankara'da peyzaj alanında kuruldu." },
+  { year: "2011", event: "İlk büyük villa peyzajı projesi Çankaya'da tamamlandı." },
+  { year: "2015", event: "Ticari peyzaj bölümü kuruldu. Kurumsal projeler başladı." },
+  { year: "2019", event: "Sürdürülebilir peyzaj ve sulama sistemleri eklendi." },
+  { year: "2022", event: "100. proje teslim edildi. Ekip 25+ uzmana ulaştı." },
+  { year: "2024", event: "250+ proje tamamlandı. 40+ kişilik uzman kadro aktif." },
 ];
 
 const team = [
-  { initials: "PY", name: "Proje Yöneticisi", title: "Saha Koordinasyonu, Uygulama" },
-  { initials: "ZM", name: "Ziraat Mühendisi", title: "Bitki Sağlığı & Sulama Sistemleri" },
-  { initials: "TU", name: "Tasarım Uzmanı", title: "3D Görselleştirme & Konsept" },
+  {
+    initials: "SB",
+    name: "Sevgi Bozdağ",
+    role: "Kurucu & Peyzaj Mimarı",
+    photo: founderAsset.url,
+  },
+  { initials: "PY", name: "Proje Yöneticisi", role: "Saha Koordinasyonu & Uygulama" },
+  { initials: "ZM", name: "Ziraat Mühendisi", role: "Bitki Sağlığı & Sulama Sistemleri" },
+  { initials: "TU", name: "Tasarım Uzmanı", role: "3D Görselleştirme & Konsept Tasarım" },
 ];
-
 
 function HakkimizdaPage() {
   return (
@@ -70,165 +96,105 @@ function HakkimizdaPage() {
         breadcrumb={[{ label: "Anasayfa", to: "/" }, { label: "Hakkımızda" }]}
       />
 
-      {/* Story */}
-      <section className="section-y bg-surface">
-        <div className="container-x grid gap-12 lg:grid-cols-2 items-start">
+      <section className="bg-primary dark-section pb-14 -mt-2">
+        <div className="container-x">
+          <p className="max-w-2xl text-dark-text/80">
+            2009'dan bu yana tasarım, uygulama ve bakımda Türkiye'nin önde gelen peyzaj firması.
+          </p>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section className="section-y bg-white">
+        <div className="container-x grid gap-12 lg:grid-cols-2 items-center">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.7 }}
           >
-            <motion.div variants={fadeUp}>
-              <SectionLabel>Hikayemiz</SectionLabel>
-            </motion.div>
-            <motion.blockquote
-              variants={fadeUp}
-              className="border-l-4 border-secondary pl-6 italic font-heading font-light text-2xl md:text-3xl !text-primary leading-snug"
-            >
-              "Bir bahçe sadece bitki değil; bir yaşam alanıdır."
-            </motion.blockquote>
+            <img
+              src={founderAsset.url}
+              alt="Sevgi Bozdağ — Landline Landscape kurucusu ve peyzaj mimarı"
+              loading="lazy"
+              className="w-full rounded-2xl shadow-card object-contain bg-surface"
+            />
           </motion.div>
+
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={staggerContainer}
-            className="space-y-5 text-text leading-relaxed"
           >
-            <motion.h3 variants={fadeUp} className="!text-primary">
-              Çizgilerin ardındaki ekip
-            </motion.h3>
-            <motion.p variants={fadeUp}>
-              Landline Landscape, 2011'den bu yana Ankara'da ve Türkiye'nin dört bir yanında peyzaj sanatını farklı bir lige
-              taşımak için çalışan, çok disiplinli bir tasarım ve uygulama atölyesidir. Peyzaj
-              mimarları, bahçe ustaları, sulama mühendisleri ve bakım teknisyenlerinden oluşan
-              ekibimizle her projeyi tek bir el gibi yönetiyoruz.
+            <motion.div variants={fadeUp}>
+              <SectionLabel>Kurucu &amp; Vizyon Sahibi</SectionLabel>
+            </motion.div>
+            <motion.h2 variants={fadeUp} className="!text-primary !mb-1">
+              Sevgi Bozdağ
+            </motion.h2>
+            <motion.p variants={fadeUp} className="font-heading text-text-muted">
+              Kurucu &amp; Peyzaj Mimarı
             </motion.p>
-            <motion.p variants={fadeUp}>
-              Çankaya'daki bir villa bahçesinden Yenimahalle'deki bir şehir parkına kadar,
-              farklı ölçeklerdeki projelerde ortak paydamız aynı: özgün tasarım, sağlam
-              uygulama ve uzun vadeli bakım.
+            <motion.div variants={fadeUp}>
+              <CopperRule />
+            </motion.div>
+            <motion.p variants={fadeUp} className="text-text leading-relaxed">
+              2009 yılında kurulan Landline Landscape, Sevgi Bozdağ'ın peyzajı salt bir estetik
+              mesele olarak değil; yaşam kalitesini doğrudan etkileyen bir tasarım disiplini olarak
+              görmesiyle hayat buldu. Yıllar içinde Ankara'nın en çok tercih edilen peyzaj firmaları
+              arasına giren Landline, bugün İstanbul'dan Bodrum'a, Çanakkale'den Antalya'ya Türkiye
+              genelinde projeler hayata geçiriyor.
             </motion.p>
-            <motion.p variants={fadeUp}>
-              250'den fazla teslim ettiğimiz proje ve sayısız bakım anlaşmamızla bugün Ankara'nın
-              en güvenilir peyzaj markalarından biriyiz.
+            <motion.p variants={fadeUp} className="mt-4 text-text leading-relaxed">
+              Sevgi Bozdağ liderliğinde büyüyen 40+ kişilik uzman ekip; tasarım, uygulama, sulama
+              sistemleri ve bakım olmak üzere dört ayrı alanda faaliyet göstermektedir. Her projede
+              aynı ilke geçerlidir: teslim tarihine uyum, şeffaf iletişim ve 2 yıl tam garanti.
             </motion.p>
+            <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
+              {["2009'dan Beri", "250+ Proje", "Türkiye Genelinde"].map((chip) => (
+                <span
+                  key={chip}
+                  className="rounded-full border border-secondary/60 px-4 py-1.5 text-sm font-semibold text-secondary"
+                >
+                  {chip}
+                </span>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="section-y bg-white">
+      {/* Why us */}
+      <section className="section-y bg-surface">
         <div className="container-x">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <SectionLabel>Değerlerimiz</SectionLabel>
-            <h2 className="!text-primary">Bizi Biz Yapan İlkeler</h2>
+            <SectionLabel>Neden Biz?</SectionLabel>
+            <h2 className="!text-primary">Neden Landline Landscape?</h2>
             <CopperRule align="center" className="mx-auto" />
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {values.map((v) => (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {whyCards.map((c) => (
               <motion.div
-                key={v.title}
-                initial={{ opacity: 0, y: 24 }}
+                key={c.title}
+                initial={{ opacity: 0, y: 22 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.55 }}
                 whileHover={{ y: -4 }}
-                className="bg-surface border border-border hover:border-secondary rounded-xl p-8 shadow-soft hover:shadow-card transition-all duration-300"
+                className="rounded-xl border border-border bg-white p-7 shadow-soft hover:border-secondary hover:shadow-card transition-[border-color,box-shadow] duration-300"
               >
-                <div className="size-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
-                  <v.icon size={28} className="text-primary" />
+                <div className="size-13 size-14 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                  <c.icon size={26} className="text-primary" />
                 </div>
-                <h3 className="!text-primary text-xl">{v.title}</h3>
+                <h3 className="!text-primary text-lg font-heading font-bold">{c.title}</h3>
                 <CopperRule width="sm" />
-                <p className="text-text-muted">{v.text}</p>
+                <p className="text-sm text-text-muted leading-relaxed">{c.text}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Team image showcase */}
-      <section className="section-y bg-surface">
-        <div className="container-x grid gap-12 lg:grid-cols-2 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7 }}
-            className="relative"
-          >
-            <img
-              src={founderImg}
-              alt="Sevgi Bozdağ — Landline Landscape kurucusu ve peyzaj mimarı"
-              loading="lazy"
-              width={1024}
-              height={1280}
-              className="rounded-xl shadow-card w-full object-cover aspect-[4/5]"
-            />
-            <div className="mt-5">
-              <p className="font-heading text-2xl font-bold !text-primary">Sevgi Bozdağ</p>
-              <p className="mt-1 text-text-muted">Kurucu &amp; Peyzaj Mimarı</p>
-            </div>
-          </motion.div>
-          <div>
-            <SectionLabel>Kurucumuz</SectionLabel>
-            <h2 className="!text-primary">Tasarımı sahada gerçeğe dönüştüren ekip</h2>
-            <CopperRule />
-            <p className="text-text-muted">
-              Peyzaj mimarları, ziraat mühendisleri, deneyimli ustalar ve bakım teknisyenleri.
-              Her uzmanlığı kendi alanında en iyi olan kişilerden bir araya getirdik.
-            </p>
-            <ul className="mt-5 space-y-2 text-text">
-              <li className="flex items-start gap-3">
-                <span className="mt-1.5 size-1.5 rounded-full bg-secondary shrink-0" />
-                40+ kişilik tasarım, uygulama ve bakım kadrosu
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1.5 size-1.5 rounded-full bg-secondary shrink-0" />
-                Akredite peyzaj mimarları ve ziraat mühendisleri
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1.5 size-1.5 rounded-full bg-secondary shrink-0" />
-                Ankara'nın her bölgesinde aynı kalite standardı
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="container-x mt-16">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((m) => (
-              <motion.div
-                key={m.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5 }}
-                className="rounded-xl border border-border bg-white p-6 text-center shadow-soft"
-              >
-                <div className="mx-auto grid size-20 place-items-center rounded-full bg-primary/10 font-heading font-bold text-xl text-primary">
-                  {m.initials}
-                </div>
-                <h3 className="mt-4 !text-primary text-base font-heading font-bold">{m.name}</h3>
-                <p className="mt-1 text-sm text-text-muted leading-relaxed">{m.title}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <p className="mt-10 text-center font-heading text-lg text-primary">
-            Ekibimizle tanışmak ister misiniz? Arayın:{" "}
-            <a
-              href={`tel:${contact.phoneRaw}`}
-              className="font-bold text-secondary underline decoration-secondary/40 underline-offset-4 hover:text-secondary-dark transition-colors"
-            >
-              {contact.phone}
-            </a>
-          </p>
-        </div>
-      </section>
-
 
       {/* Timeline */}
       <section className="section-y gradient-dark dark-section">
@@ -240,7 +206,7 @@ function HakkimizdaPage() {
           </div>
           <div className="relative overflow-x-auto pb-4">
             <div className="absolute top-[34px] left-0 right-0 h-px bg-secondary/40 block md:hidden lg:block" />
-            <ol className="flex gap-10 min-w-max md:grid md:grid-cols-5 md:gap-6 md:min-w-0">
+            <ol className="flex gap-10 min-w-max md:grid md:grid-cols-3 lg:grid-cols-6 md:gap-6 md:min-w-0">
               {timeline.map((t, idx) => (
                 <motion.li
                   key={t.year}
@@ -264,10 +230,88 @@ function HakkimizdaPage() {
         </div>
       </section>
 
-      <CTABanner
-        title="Birlikte Çalışalım"
-        description="Projeniz için Ankara'nın en deneyimli peyzaj ekibini yanınızda hissedin."
-      />
+      {/* Team */}
+      <section className="section-y bg-white">
+        <div className="container-x">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <SectionLabel>Ekibimiz</SectionLabel>
+            <h2 className="!text-primary">Ekibimiz</h2>
+            <CopperRule align="center" className="mx-auto" />
+            <p className="text-text-muted">
+              Tasarımdan teslimata her adımda yanınızda olan 40+ kişilik uzman kadromuz
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {team.map((m) => (
+              <motion.div
+                key={m.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center gap-5 rounded-xl border border-border bg-surface p-6 shadow-soft"
+              >
+                {m.photo ? (
+                  <img
+                    src={m.photo}
+                    alt={`${m.name} — ${m.role}`}
+                    loading="lazy"
+                    className="size-20 rounded-full object-cover shrink-0"
+                  />
+                ) : (
+                  <div className="grid size-20 shrink-0 place-items-center rounded-full bg-primary/10 font-heading font-bold text-xl text-primary">
+                    {m.initials}
+                  </div>
+                )}
+                <div>
+                  <h3 className="!text-primary text-base font-heading font-bold">{m.name}</h3>
+                  <p className="mt-1 text-sm text-text-muted leading-relaxed">{m.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <p className="mt-10 text-center text-sm text-text-muted">
+            Ve 36+ saha uzmanı, uygulama teknisyeni ve bakım ekibi.
+          </p>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="bg-primary dark-section py-20 border-t-[3px] border-secondary">
+        <div className="container-x text-center text-dark-text">
+          <h2 className="!text-dark-text">Projenizi Birlikte Hayata Geçirelim</h2>
+          <CopperRule align="center" className="mx-auto" />
+          <p className="text-dark-text/80">
+            Ücretsiz keşif görüşmesi için bugün iletişime geçin.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <ButtonLink href="/iletisim" variant="primary" size="lg">
+              Teklif Al →
+            </ButtonLink>
+            <ButtonLink
+              href={contact.whatsappMsg}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="whatsapp"
+              size="lg"
+            >
+              WhatsApp ile Yaz
+            </ButtonLink>
+          </div>
+          <p className="mt-6 flex flex-wrap items-center justify-center gap-2 text-dark-text/75">
+            <Phone size={16} className="text-secondary" />
+            <a href={`tel:${contact.phoneRaw}`} className="hover:text-secondary-pale transition-colors">
+              {contact.phone}
+            </a>
+            <span>· Haftanın 7 Günü</span>
+          </p>
+          <p className="mt-4 text-sm">
+            <Link to="/hizmetler" className="text-secondary-pale hover:text-dark-text transition-colors">
+              Tüm hizmetlerimizi inceleyin →
+            </Link>
+          </p>
+        </div>
+      </section>
     </>
   );
 }
