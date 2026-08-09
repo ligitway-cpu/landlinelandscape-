@@ -16,6 +16,7 @@ import { Route as IletisimRouteImport } from './routes/iletisim'
 import { Route as HizmetlerRouteImport } from './routes/hizmetler'
 import { Route as HakkimizdaRouteImport } from './routes/hakkimizda'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HizmetlerSlugRouteImport } from './routes/hizmetler_.$slug'
 
 const SssRoute = SssRouteImport.update({
   id: '/sss',
@@ -52,6 +53,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HizmetlerSlugRoute = HizmetlerSlugRouteImport.update({
+  id: '/hizmetler_/$slug',
+  path: '/hizmetler/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/projeler': typeof ProjelerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sss': typeof SssRoute
+  '/hizmetler/$slug': typeof HizmetlerSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/projeler': typeof ProjelerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sss': typeof SssRoute
+  '/hizmetler/$slug': typeof HizmetlerSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/projeler': typeof ProjelerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sss': typeof SssRoute
+  '/hizmetler_/$slug': typeof HizmetlerSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/projeler'
     | '/sitemap.xml'
     | '/sss'
+    | '/hizmetler/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/projeler'
     | '/sitemap.xml'
     | '/sss'
+    | '/hizmetler/$slug'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/projeler'
     | '/sitemap.xml'
     | '/sss'
+    | '/hizmetler_/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +131,7 @@ export interface RootRouteChildren {
   ProjelerRoute: typeof ProjelerRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SssRoute: typeof SssRoute
+  HizmetlerSlugRoute: typeof HizmetlerSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -172,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hizmetler_/$slug': {
+      id: '/hizmetler_/$slug'
+      path: '/hizmetler/$slug'
+      fullPath: '/hizmetler/$slug'
+      preLoaderRoute: typeof HizmetlerSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -183,17 +203,8 @@ const rootRouteChildren: RootRouteChildren = {
   ProjelerRoute: ProjelerRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SssRoute: SssRoute,
+  HizmetlerSlugRoute: HizmetlerSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
