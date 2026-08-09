@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useRouterState } from '@tanstack/react-router';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X, Leaf, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { ButtonLink } from '@/components/ui/brand-button';
@@ -62,8 +62,22 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <ButtonLink href={contact.whatsappMsg} target="_blank" rel="noopener noreferrer" variant="primary" size="sm">
+        <div className="flex items-center gap-3">
+          <a
+            href={`tel:${contact.phoneRaw}`}
+            className="inline-flex items-center gap-2 text-sm font-body font-semibold text-dark-text/65 hover:text-dark-text transition-colors"
+          >
+            <Phone size={17} />
+            <span className="hidden sm:inline">{contact.phone}</span>
+          </a>
+          <ButtonLink
+            href={contact.whatsappMsg}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="primary"
+            size="sm"
+            className="hidden lg:inline-flex"
+          >
             Randevu Al
           </ButtonLink>
         </div>
