@@ -75,17 +75,6 @@ const timeline = [
   { year: "2024", event: "250+ proje tamamlandı. 40+ kişilik uzman kadro aktif." },
 ];
 
-const team = [
-  {
-    initials: "SB",
-    name: "Sevgi Bozdağ",
-    role: "Kurucu & Peyzaj Mimarı",
-    photo: founderAsset.url,
-  },
-  { initials: "PY", name: "Proje Yöneticisi", role: "Saha Koordinasyonu & Uygulama" },
-  { initials: "ZM", name: "Ziraat Mühendisi", role: "Bitki Sağlığı & Sulama Sistemleri" },
-  { initials: "TU", name: "Tasarım Uzmanı", role: "3D Görselleştirme & Konsept Tasarım" },
-];
 
 function HakkimizdaPage() {
   return (
