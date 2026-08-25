@@ -219,52 +219,6 @@ function HakkimizdaPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="section-y bg-white">
-        <div className="container-x">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <SectionLabel>Ekibimiz</SectionLabel>
-            <h2 className="!text-primary">Ekibimiz</h2>
-            <CopperRule align="center" className="mx-auto" />
-            <p className="text-text-muted">
-              Tasarımdan teslimata her adımda yanınızda olan 40+ kişilik uzman kadromuz
-            </p>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {team.map((m) => (
-              <motion.div
-                key={m.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5 }}
-                className="flex items-center gap-5 rounded-xl border border-border bg-surface p-6 shadow-soft"
-              >
-                {m.photo ? (
-                  <img
-                    src={m.photo}
-                    alt={`${m.name} — ${m.role}`}
-                    loading="lazy"
-                    className="size-20 rounded-full object-cover shrink-0"
-                  />
-                ) : (
-                  <div className="grid size-20 shrink-0 place-items-center rounded-full bg-primary/10 font-heading font-bold text-xl text-primary">
-                    {m.initials}
-                  </div>
-                )}
-                <div>
-                  <h3 className="!text-primary text-base font-heading font-bold">{m.name}</h3>
-                  <p className="mt-1 text-sm text-text-muted leading-relaxed">{m.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <p className="mt-10 text-center text-sm text-text-muted">
-            Ve 36+ saha uzmanı, uygulama teknisyeni ve bakım ekibi.
-          </p>
-        </div>
-      </section>
-
       {/* Bottom CTA */}
       <section className="bg-primary dark-section py-20 border-t-[3px] border-secondary">
         <div className="container-x text-center text-dark-text">
