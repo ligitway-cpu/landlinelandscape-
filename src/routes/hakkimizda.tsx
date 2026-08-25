@@ -82,16 +82,9 @@ function HakkimizdaPage() {
       <PageHero
         label="Hakkımızda"
         title="Türkiye Genelinde Güvenilir Peyzaj Partneri"
+        description="Ankara merkezli, 2009'dan bu yana Türkiye genelinde tasarım, uygulama ve bakım hizmeti veriyoruz."
         breadcrumb={[{ label: "Anasayfa", to: "/" }, { label: "Hakkımızda" }]}
       />
-
-      <section className="bg-primary dark-section pb-14 -mt-2">
-        <div className="container-x">
-          <p className="max-w-2xl text-dark-text/80">
-            Ankara merkezli, 2009'dan bu yana Türkiye genelinde tasarım, uygulama ve bakım hizmeti veriyoruz.
-          </p>
-        </div>
-      </section>
 
       {/* Founder */}
       <section className="section-y bg-white">
@@ -101,14 +94,17 @@ function HakkimizdaPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.7 }}
-            className="w-full"
+            className="w-full min-h-[360px] sm:min-h-[480px]"
           >
-            <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-card bg-surface">
+            <div className="relative w-full min-h-[360px] aspect-[4/5] rounded-2xl overflow-hidden shadow-card bg-surface sm:min-h-[480px]">
               <img
                 src={founderAsset.url}
                 alt="Sevgi Bozdağ — Landline Landscape kurucusu ve peyzaj mimarı"
-                loading="lazy"
-                className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+                width={768}
+                height={1024}
+                className="absolute inset-0 h-full w-full object-cover object-center"
               />
             </div>
           </motion.div>
