@@ -101,13 +101,16 @@ function HakkimizdaPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.7 }}
+            className="w-full"
           >
-            <img
-              src={founderAsset.url}
-              alt="Sevgi Bozdağ — Landline Landscape kurucusu ve peyzaj mimarı"
-              loading="lazy"
-              className="w-full rounded-2xl shadow-card object-contain bg-surface"
-            />
+            <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-card bg-surface">
+              <img
+                src={founderAsset.url}
+                alt="Sevgi Bozdağ — Landline Landscape kurucusu ve peyzaj mimarı"
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
 
           <motion.div
