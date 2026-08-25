@@ -75,17 +75,6 @@ const timeline = [
   { year: "2024", event: "250+ proje tamamlandı. 40+ kişilik uzman kadro aktif." },
 ];
 
-const team = [
-  {
-    initials: "SB",
-    name: "Sevgi Bozdağ",
-    role: "Kurucu & Peyzaj Mimarı",
-    photo: founderAsset.url,
-  },
-  { initials: "PY", name: "Proje Yöneticisi", role: "Saha Koordinasyonu & Uygulama" },
-  { initials: "ZM", name: "Ziraat Mühendisi", role: "Bitki Sağlığı & Sulama Sistemleri" },
-  { initials: "TU", name: "Tasarım Uzmanı", role: "3D Görselleştirme & Konsept Tasarım" },
-];
 
 function HakkimizdaPage() {
   return (
@@ -99,7 +88,7 @@ function HakkimizdaPage() {
       <section className="bg-primary dark-section pb-14 -mt-2">
         <div className="container-x">
           <p className="max-w-2xl text-dark-text/80">
-            2009'dan bu yana tasarım, uygulama ve bakımda Türkiye'nin önde gelen peyzaj firması.
+            Ankara merkezli, 2009'dan bu yana Türkiye genelinde tasarım, uygulama ve bakım hizmeti veriyoruz.
           </p>
         </div>
       </section>
@@ -112,13 +101,16 @@ function HakkimizdaPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.7 }}
+            className="w-full"
           >
-            <img
-              src={founderAsset.url}
-              alt="Sevgi Bozdağ — Landline Landscape kurucusu ve peyzaj mimarı"
-              loading="lazy"
-              className="w-full rounded-2xl shadow-card object-contain bg-surface"
-            />
+            <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-card bg-surface">
+              <img
+                src={founderAsset.url}
+                alt="Sevgi Bozdağ — Landline Landscape kurucusu ve peyzaj mimarı"
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
 
           <motion.div
@@ -227,52 +219,6 @@ function HakkimizdaPage() {
               ))}
             </ol>
           </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="section-y bg-white">
-        <div className="container-x">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <SectionLabel>Ekibimiz</SectionLabel>
-            <h2 className="!text-primary">Ekibimiz</h2>
-            <CopperRule align="center" className="mx-auto" />
-            <p className="text-text-muted">
-              Tasarımdan teslimata her adımda yanınızda olan 40+ kişilik uzman kadromuz
-            </p>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {team.map((m) => (
-              <motion.div
-                key={m.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5 }}
-                className="flex items-center gap-5 rounded-xl border border-border bg-surface p-6 shadow-soft"
-              >
-                {m.photo ? (
-                  <img
-                    src={m.photo}
-                    alt={`${m.name} — ${m.role}`}
-                    loading="lazy"
-                    className="size-20 rounded-full object-cover shrink-0"
-                  />
-                ) : (
-                  <div className="grid size-20 shrink-0 place-items-center rounded-full bg-primary/10 font-heading font-bold text-xl text-primary">
-                    {m.initials}
-                  </div>
-                )}
-                <div>
-                  <h3 className="!text-primary text-base font-heading font-bold">{m.name}</h3>
-                  <p className="mt-1 text-sm text-text-muted leading-relaxed">{m.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <p className="mt-10 text-center text-sm text-text-muted">
-            Ve 36+ saha uzmanı, uygulama teknisyeni ve bakım ekibi.
-          </p>
         </div>
       </section>
 
