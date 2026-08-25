@@ -88,7 +88,7 @@ function HakkimizdaPage() {
       <section className="bg-primary dark-section pb-14 -mt-2">
         <div className="container-x">
           <p className="max-w-2xl text-dark-text/80">
-            2009'dan bu yana tasarım, uygulama ve bakımda Türkiye'nin önde gelen peyzaj firması.
+            Ankara merkezli, 2009'dan bu yana Türkiye genelinde tasarım, uygulama ve bakım hizmeti veriyoruz.
           </p>
         </div>
       </section>
