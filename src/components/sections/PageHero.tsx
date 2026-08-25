@@ -6,10 +6,11 @@ import { fadeUp, staggerContainer } from '@/lib/variants';
 interface Props {
   label: string;
   title: string;
+  description?: string;
   breadcrumb?: { label: string; to?: string }[];
 }
 
-export function PageHero({ label, title, breadcrumb }: Props) {
+export function PageHero({ label, title, description, breadcrumb }: Props) {
   return (
     <section className="relative pt-40 pb-20 md:pt-48 md:pb-24 dark-section overflow-hidden">
       <div className="absolute inset-0 gradient-dark" />
@@ -35,8 +36,13 @@ export function PageHero({ label, title, breadcrumb }: Props) {
         <motion.div variants={fadeUp}>
           <CopperRule width="lg" />
         </motion.div>
+        {description && (
+          <motion.p variants={fadeUp} className="mt-5 max-w-3xl text-lg text-dark-text/80 md:text-xl">
+            {description}
+          </motion.p>
+        )}
         {breadcrumb && (
-          <motion.nav variants={fadeUp} className="mt-2 text-sm text-dark-text/55">
+          <motion.nav variants={fadeUp} className="mt-5 text-sm text-dark-text/55">
             {breadcrumb.map((b, i) => (
               <span key={i}>
                 {b.to ? (
