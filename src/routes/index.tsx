@@ -6,7 +6,6 @@ import { GuaranteeStrip } from "@/components/sections/GuaranteeStrip";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
-import { TransformationsSection } from "@/components/sections/TransformationsSection";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { LeadCapture } from "@/components/sections/LeadCapture";
 
@@ -87,7 +86,6 @@ function Index() {
       <ServicesGrid />
       <ProcessTimeline />
       <ProjectsShowcase />
-      <TransformationsSection />
       <TestimonialsCarousel />
       <LeadCapture />
     </>
